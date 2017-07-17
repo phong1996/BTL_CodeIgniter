@@ -10,4 +10,10 @@ class Product extends CI_Controller {
 		$data['content']='admin/product/index';
 		$this->load->view('admin/master',$data);
 	}
+	public function add()
+	{
+		$data=array();
+		$data['content']='admin/product/add';
+		$this->load->view('admin/master',$data);
+	}
 }

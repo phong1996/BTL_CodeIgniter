@@ -7,7 +7,7 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <title>Welcome To | Bootstrap Based Admin Template - Material Design</title>
     <!-- Favicon-->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="<?php echo public_url(); ?>/favicon.ico" type="image/x-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
@@ -21,15 +21,19 @@
 
     <!-- Animation Css -->
     <link href="<?php echo public_url(); ?>/plugins/animate-css/animate.css" rel="stylesheet" />
-
     <!-- Morris Chart Css-->
     <link href="<?php echo public_url(); ?>/plugins/morrisjs/morris.css" rel="stylesheet" />
+
+
+    <!-- JQuery DataTable Css -->
+    <link href="<?php echo public_url(); ?>/plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css" rel="stylesheet">
 
     <!-- Custom Css -->
     <link href="<?php echo public_url(); ?>/css/style.css" rel="stylesheet">
 
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="<?php echo public_url(); ?>/css/themes/all-themes.css" rel="stylesheet" />
+
 </head>
 
 <body class="theme-red">
@@ -482,6 +486,7 @@
 </section>
 
 <!-- Jquery Core Js -->
+<!-- Jquery Core Js -->
 <script src="<?php echo public_url(); ?>/plugins/jquery/jquery.min.js"></script>
 
 <!-- Bootstrap Core Js -->
@@ -491,11 +496,10 @@
 <script src="<?php echo public_url(); ?>/plugins/bootstrap-select/js/bootstrap-select.js"></script>
 
 <!-- Slimscroll Plugin Js -->
-<script src="<?php echo public_url(); ?>/plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+<script src="<?php echo public_url(); ?>./plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
 
 <!-- Waves Effect Plugin Js -->
 <script src="<?php echo public_url(); ?>/plugins/node-waves/waves.js"></script>
-
 <!-- Jquery CountTo Plugin Js -->
 <script src="<?php echo public_url(); ?>/plugins/jquery-countto/jquery.countTo.js"></script>
 
@@ -506,6 +510,16 @@
 <!-- ChartJs -->
 <script src="<?php echo public_url(); ?>/plugins/chartjs/Chart.bundle.js"></script>
 
+<!-- Jquery DataTable Plugin Js -->
+<script src="<?php echo public_url(); ?>/plugins/jquery-datatable/jquery.dataTables.js"></script>
+<script src="<?php echo public_url(); ?>/plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js"></script>
+<script src="<?php echo public_url(); ?>/plugins/jquery-datatable/extensions/export/dataTables.buttons.min.js"></script>
+<script src="<?php echo public_url(); ?>/plugins/jquery-datatable/extensions/export/buttons.flash.min.js"></script>
+<script src="<?php echo public_url(); ?>/plugins/jquery-datatable/extensions/export/jszip.min.js"></script>
+<script src="<?php echo public_url(); ?>/plugins/jquery-datatable/extensions/export/pdfmake.min.js"></script>
+<script src="<?php echo public_url(); ?>/plugins/jquery-datatable/extensions/export/vfs_fonts.js"></script>
+<script src="<?php echo public_url(); ?>/plugins/jquery-datatable/extensions/export/buttons.html5.min.js"></script>
+<script src="<?php echo public_url(); ?>/plugins/jquery-datatable/extensions/export/buttons.print.min.js"></script>
 <!-- Flot Charts Plugin Js -->
 <script src="<?php echo public_url(); ?>/plugins/flot-charts/jquery.flot.js"></script>
 <script src="<?php echo public_url(); ?>/plugins/flot-charts/jquery.flot.resize.js"></script>
@@ -518,10 +532,12 @@
 
 <!-- Custom Js -->
 <script src="<?php echo public_url(); ?>/js/admin.js"></script>
+<script src="<?php echo public_url(); ?>/js/pages/tables/jquery-datatable.js"></script>
 <script src="<?php echo public_url(); ?>/js/pages/index.js"></script>
 
 <!-- Demo Js -->
 <script src="<?php echo public_url(); ?>/js/demo.js"></script>
+
 </body>
 
 </html>
