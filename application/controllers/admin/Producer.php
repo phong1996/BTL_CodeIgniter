@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Producer extends CI_Controller {
+class Producer extends MY_Controller {
 
 
     public function index()

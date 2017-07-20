@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Bill extends CI_Controller {
+class Bill extends MY_Controller {
 
 
     public function index()
