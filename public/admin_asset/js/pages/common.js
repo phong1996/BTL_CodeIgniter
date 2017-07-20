@@ -1,4 +1,34 @@
-jQuery.validator.addMethod("special_character", function(value, element) {
+/*
+
+var url_root = 'http://localhost/ustora/';
+$(document).ready(function() {
+    $(".user_status").click(function () {
+        var user_status = 0;
+        if($(this).prop('checked') === true){
+            user_status = 1;
+        }else{
+            user_status = 0;
+        }
+        $.ajax({
+            type: "post",
+            dataType: "json",
+            url: url_root+"admin/controllers/user_controller.php?action=ajaxUpdateUserStatus",
+            data: {userId: $(this).attr('user_id'), user_status : user_status},
+            beforeSend: function(){
+                $('.loading_popup').show();
+            },
+            success: function (result) {
+                $('.loading_popup').hide();
+                //$("#div1").html(result);
+            }
+        });
+    });
+
+*/
+
+
+
+    jQuery.validator.addMethod("special_character", function(value, element) {
     return  /[a-zA-Z0-9]+$/.test(value);
 });
 
@@ -80,3 +110,4 @@ $("#frm-regis").validate({
     }
 
 });
+
