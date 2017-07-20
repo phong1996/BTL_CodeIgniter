@@ -29,7 +29,11 @@ class Users extends MY_Controller {
         $data['address'] = $this->input->get('address');
         $data['phone'] = $this->input->get('sdt');
         $data['level'] = $this->input->get('level');
-        $data['status'] = $this->input->get('status');
+        if($this->input->get('status') == 'on'){
+            $data['status'] = 1;
+        }else{
+            $data['status'] = 0;
+        }
         $data['created_at'] = date("Y/m/d");
 
         if($this->User_model->create($data))
