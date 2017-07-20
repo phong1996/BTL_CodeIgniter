@@ -58,8 +58,8 @@ CREATE TABLE `bill_info` (
 
 CREATE TABLE `contacts` (
   `id` int(11) NOT NULL,
-  `email` int(11) NOT NULL,
-  `content` int(11) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `content` text NOT NULL,
   `phone` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -259,7 +259,8 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
-
+ALTER TABLE `contacts`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `bill`
 --
