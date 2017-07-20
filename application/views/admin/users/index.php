@@ -7,7 +7,7 @@
                 </h2>
                 <div><p><?php echo $this->session->flashdata('flash_message'); ?></p></div>
                 <div class="add" style="text-align: center">
-                    <a href="add"> <button  class="btn btn-primary dropdown-toggle"></span><b>Thêm Mới</b></button></a>
+                    <a href="<?php echo url_admin('users/add'); ?>"> <button  class="btn btn-primary dropdown-toggle"></span><b>Thêm Mới</b></button></a>
                 </div>
                 <ul class="header-dropdown m-r--5">
                     <li class="dropdown">
@@ -75,7 +75,7 @@
                                         </div>
                                         </td>
                                     <td><?php echo $li->created_at ?></td>
-                                    <td><a href="delete?id=<?php echo $li->id ?>"><i class="fa fa-trash-o" aria-hidden="true"></i></a><a href=""><i style="margin-left: 18px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+                                    <td><a href="<?php echo url_admin('users/delete'); ?>?id=<?php echo $li->id ?>"><i class="fa fa-trash-o" aria-hidden="true"></i></a><a href=""><i style="margin-left: 18px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
                                 </tr>
                                 <?php
                                }

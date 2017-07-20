@@ -35,7 +35,7 @@ CREATE TABLE `bill` (
   `cus_adress` varchar(110) NOT NULL,
   `total_price` float NOT NULL,
   `created_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -48,7 +48,7 @@ CREATE TABLE `bill_info` (
   `id_bill` int(11) NOT NULL,
   `id_product` int(11) NOT NULL,
   `quatyti` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -61,7 +61,7 @@ CREATE TABLE `contacts` (
   `email` int(11) NOT NULL,
   `content` int(11) NOT NULL,
   `phone` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -74,7 +74,7 @@ CREATE TABLE `images` (
   `id_products` int(11) NOT NULL,
   `name` varchar(50) NOT NULL,
   `status` int(1) NOT NULL DEFAULT '1'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -86,7 +86,7 @@ CREATE TABLE `producer` (
   `id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
   `logo` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -104,7 +104,7 @@ CREATE TABLE `products` (
   `sale-off` float NOT NULL,
   `views` int(11) NOT NULL,
   `description` varchar(10000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -123,7 +123,7 @@ CREATE TABLE `products_info` (
   `design` varchar(1000) NOT NULL,
   `battery_charge` varchar(1000) NOT NULL,
   `utilities` varchar(1000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -136,7 +136,7 @@ CREATE TABLE `rates` (
   `id_user` int(11) NOT NULL,
   `id_product` int(11) NOT NULL,
   `rate` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -148,7 +148,7 @@ CREATE TABLE `slides` (
   `id` int(11) NOT NULL,
   `images` varchar(500) NOT NULL,
   `link` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -163,7 +163,7 @@ CREATE TABLE `tech_news` (
   `content` text NOT NULL,
   `images` varchar(50) NOT NULL,
   `status` int(1) DEFAULT '1'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -177,12 +177,12 @@ CREATE TABLE `users` (
   `password` varchar(50) NOT NULL,
   `fullname` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `adress` varchar(200) NOT NULL,
+  `address` varchar(200) NOT NULL,
   `phone` int(11) NOT NULL,
   `level` int(11) NOT NULL,
   `status` int(1) NOT NULL DEFAULT '1',
-  `created_at` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `created_at` date() NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Indexes for dumped tables
