@@ -1,7 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+<<<<<<< HEAD
 class TechNew extends My_Contronller {
+=======
+class TechNew extends MY_Controller {
+>>>>>>> origin/master
 
 
     public function index()

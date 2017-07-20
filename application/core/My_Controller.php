@@ -1,28 +1,28 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+Class MY_Controller extends CI_Controller
+{
+    var $data = array();
+    function __construct()
+    {
+        parent::__construct();
+        $controller = $this->uri->segment(1);
 
-class My_Contronller extends CI_Controller {
+        $controller = strtolower($controller);
 
-	public $data=array();
+        switch($controller)
+        {
+            case 'admin':
+            {
 
-	public function __construct()
-	{
-		parent::__construct();
-		$controller=$this->uri->segment(1);
-		switch ($controller) {
-			case 'admin':
-				$this->check_login();
-				break;
-			
-			default:
-				# code...
-				break;
-		}
-	}
+                break;
+            }
+            default:
+            {
 
-	private function check_login()
-	{
-		//$this->load->view('admin/login');
-	}
+                break;
+            }
+        }
+    }
+
 
 }
