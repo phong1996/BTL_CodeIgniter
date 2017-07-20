@@ -19,39 +19,39 @@
                 </ul>
             </div>
             <div class="body">
-                <form class="form-horizontal">
+                <form class="form-horizontal" id="frm-regis" action="create" method="get">
                     <div class="row clearfix">
                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                            <label for="email_address_2">Username</label>
+                            <label for="email_address_2">Tài Khoản</label>
                         </div>
                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="text" id="email_address_2" class="form-control" placeholder="Enter your Username">
+                                    <input type="text" id="username" name="username" class="form-control" placeholder="John...">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="row clearfix">
                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                            <label for="password_2">Password</label>
+                            <label for="password_2">Mật khẩu</label>
                         </div>
                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="password" id="password_2" class="form-control" placeholder="Enter your Password">
+                                    <input type="password" id="password" name="password" class="form-control" placeholder="******">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="row clearfix">
                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                            <label for="password_2">Fullname</label>
+                            <label for="password_2">Họ và tên</label>
                         </div>
                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="password" id="password_2" class="form-control" placeholder="Enter your Fullname">
+                                    <input type="text" id="fullname" name="fullname" class="form-control" placeholder="Lê John...">
                                 </div>
                             </div>
                         </div>
@@ -63,31 +63,32 @@
                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="password" id="password_2" class="form-control" placeholder="Enter your Email">
+                                    <input type="text" id="email" name="email" class="form-control" placeholder="abc@xyz....">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="row clearfix">
                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                            <label for="password_2">Adress</label>
+                            <label for="password_2">Địa Chỉ</label>
                         </div>
                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="password" id="password_2" class="form-control" placeholder="Enter your Adress">
+                                    <input type="text" id="address" name="address" class="form-control" placeholder="Địa chỉ...">
                                 </div>
                             </div>
+
                         </div>
                     </div>
                     <div class="row clearfix">
                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                            <label for="password_2">Phone</label>
+                            <label for="password_2">SĐT</label>
                         </div>
                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="password" id="password_2" class="form-control" placeholder="Enter your Phone">
+                                    <input type="text" name="sdt" id="sdt" class="form-control" placeholder="0123456789...">
                                 </div>
                             </div>
                         </div>
@@ -96,47 +97,28 @@
                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
                             <label for="password_2">Level</label>
                         </div>
-                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                            <div class="form-group">
-                                <div class="form-line">
-                                    <input type="password" id="password_2" class="form-control" placeholder="Enter your Level">
-                                </div>
-                            </div>
+                        <div class="col-sm-6">
+                            <select name="level" class="form-control ">
+                                <option  value="1">Admin</option>
+                                <option selected value="0">Khách Hàng</option>
+                            </select>
                         </div>
+
                     </div>
                     <div class="row clearfix">
                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
                             <label for="password_2">Status</label>
                         </div>
-                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                            <div class="form-group">
-                                <div class="form-line">
-                                    <input type="password" id="password_2" class="form-control" placeholder="Enter your Status">
-                                </div>
+                        <div class="col-sm-3" style="margin-top: 7px;">
+                            <div class="switch">
+                                <label><input type="checkbox" name="status" checked><span class="lever switch-col-blue"></span></label>
                             </div>
                         </div>
                     </div>
-                    <div class="row clearfix">
-                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                            <label for="password_2">Created_at</label>
-                        </div>
-                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                            <div class="form-group">
-                                <div class="form-line">
-                                    <input type="password" id="password_2" class="form-control" placeholder="Enter your Created_at">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                     <div class="row clearfix">
                         <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5">
-                            <input type="checkbox" id="remember_me_3" class="filled-in">
-                            <label for="remember_me_3">Remember Me</label>
-                        </div>
-                    </div>
-                    <div class="row clearfix">
-                        <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5">
-                            <button type="button" class="btn btn-primary m-t-15 waves-effect">THÊM</button>
+                            <button type="submit" class="btn btn-primary m-t-15 waves-effect">THÊM</button>
                         </div>
                     </div>
                 </form>

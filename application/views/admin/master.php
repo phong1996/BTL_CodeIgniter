@@ -24,7 +24,7 @@
     <!-- Morris Chart Css-->
     <link href="<?php echo public_url(); ?>/plugins/morrisjs/morris.css" rel="stylesheet" />
 
-
+    <link href="<?php echo public_url(); ?>/plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
     <!-- JQuery DataTable Css -->
     <link href="<?php echo public_url(); ?>/plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css" rel="stylesheet">
 
@@ -33,6 +33,9 @@
 
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="<?php echo public_url(); ?>/css/themes/all-themes.css" rel="stylesheet" />
+    <link href="<?php echo public_url(); ?>/icon/css/font-awesome.min.css" rel="stylesheet" />
+
+
 
 </head>
 
@@ -483,6 +486,7 @@
 
     <?php $this->load->view($content) ?>
 
+
 </section>
 
 <!-- Jquery Core Js -->
@@ -537,6 +541,11 @@
 
 <!-- Demo Js -->
 <script src="<?php echo public_url(); ?>/js/demo.js"></script>
+<script src="<?php  echo public_url();?>/js/pages/forms/basic-form-elements.js"></script>
+<script src="<?php  echo public_url();?>/js/pages/jquery.validate.min.js"></script>
+<script src="<?php  echo public_url();?>/js/pages/common.js"></script>
+
+
 
 </body>
 
