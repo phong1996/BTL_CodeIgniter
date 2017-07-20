@@ -13,3 +13,8 @@ function pre($list, $exit = true)
         die();
     }
 }
+
+function url_admin($url = '')
+{
+	return base_url('admin/'.$url);
+}
