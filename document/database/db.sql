@@ -181,7 +181,7 @@ CREATE TABLE `users` (
   `phone` int(11) NOT NULL,
   `level` int(11) NOT NULL,
   `status` int(1) NOT NULL DEFAULT '1',
-  `created_at` int(11) NOT NULL
+  `created_at` datetime() NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
