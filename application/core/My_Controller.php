@@ -13,7 +13,18 @@ Class MY_Controller extends CI_Controller
         {
             case 'admin':
             {
+                if(strtolower($this->uri->segment(2)=='login'))
+                {
+                   
+                }
+                elseif($this->session->userdata("user_login"))
+                {
 
+                }
+                else
+                {
+                  return redirect('admin/login');
+                }
                 break;
             }
             default:

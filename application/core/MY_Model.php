@@ -1,31 +1,17 @@
-<<<<<<< HEAD
-<?php 
-	/**
-	* 
-	*/
-	class MY_Model extends CI_Model
-	{
-		function __construct()
-		{
-			
-		}
-	}
- ?>
-=======
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class MY_Model extends CI_Model {
 
     // Ten table
-    var $table = '';
+    protected $table = '';
 
     // Key chinh cua table
-    var $key = 'id';
+    protected $key = 'id';
 
     // Order mac dinh (VD: $order = array('id', 'desc))
-    var $order = '';
+    protected $order = '';
 
     // Cac field select mac dinh khi get_list (VD: $select = 'id, name')
-    var $select = '';
+    protected $select = '';
 
     /**
      * Them row moi
@@ -286,4 +272,4 @@ class MY_Model extends CI_Model {
 
 }
 ?>
->>>>>>> origin/master
+

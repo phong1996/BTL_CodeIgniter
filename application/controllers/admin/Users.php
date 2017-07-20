@@ -1,13 +1,13 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-<<<<<<< HEAD
-class Users extends My_Contronller {
-=======
+
 class Users extends MY_Controller {
->>>>>>> origin/master
-
-
+    function __construct()
+    {
+        parent::__construct();
+        $this->load->model('User_model');
+    }
     public function index()
     {
         $data=array();
@@ -20,11 +20,8 @@ class Users extends MY_Controller {
         $data['content']='admin/Users/add';
         $this->load->view('admin/master',$data);
     }
-
-
     function create()
     {
-        $this->load->model('User_model');
         $data = array();
         $data['username'] = 'admin1';
         $data['password'] = 'admin';
@@ -37,4 +34,5 @@ class Users extends MY_Controller {
         }
 
     }
+
 }

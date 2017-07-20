@@ -1,5 +1,5 @@
 <?php
-class Users_model extends MY_Model
+class User_model extends MY_Model
 {
-    var $table = 'users';
+    protected $table = 'users';
 }
