@@ -1,9 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-class TechNew extends MY_Controller {
-
-
+class TechNew extends My_Contronller {
     public function index()
     {
         $data=array();

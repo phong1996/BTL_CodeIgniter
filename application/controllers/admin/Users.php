@@ -1,14 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
 class Users extends MY_Controller {
-
-    public function __construct()
+    function __construct()
     {
         parent::__construct();
         $this->load->model('User_model');
     }
-
     public function index()
     {
         $input = array();
@@ -22,8 +19,6 @@ class Users extends MY_Controller {
         $data['content']='admin/Users/add';
         $this->load->view('admin/master',$data);
     }
-
-
     function create()
     {
         $data = array();
@@ -89,4 +84,5 @@ class Users extends MY_Controller {
         echo '<pre>';
         print_r($list);
     }
+
 }

@@ -25,13 +25,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="header-main">
 		       <h1>Classy Login Form</h1>
 			<div class="header-bottom">
+				<div style="color: red;text-align: center;">
+					<?php echo $this->session->flashdata('fail_login'); ?>
+				</div>
 				<div class="header-right w3agile">
-					
 					<div class="header-left-bottom agileinfo">
-						
-					 <form action="#" method="post">
-						<input type="text"  value="User name" name="name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'User name';}"/>
-					<input type="password"  value="Password" name="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'password';}"/>
+					 <form action="login/login" method="post">
+						<input type="text" name="username" placeholder="Username" />
+						<input type="password" name="password" placeholder="password" />
 						<div class="remember">
 			             <span class="checkbox1">
 							   <label class="checkbox"><input type="checkbox" name="" checked=""><i> </i>Remember me</label>
@@ -42,7 +43,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<div class="clear"> </div>
 					  </div>
 					   
-						<input type="submit" value="Login">
+						<input name="login" type="submit" value="Login">
 					</form>	
 					<div class="header-left-top">
 						<div class="sign-up"> <h2>or</h2> </div>
