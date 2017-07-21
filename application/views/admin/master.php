@@ -217,7 +217,7 @@
 <script type="text/javascript">
         var url=window.location.href;
         $('.menu ul li').each(function () {
-            if($(this).find('a').attr('href')==url)
+            if(url.indexOf($(this).find('a').attr('href'))!=-1)
             {
                 $(this).addClass('active');
             }

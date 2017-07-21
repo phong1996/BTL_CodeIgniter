@@ -7,7 +7,7 @@
                 </h2>
                 <ul class="header-dropdown">
                   
-                    <a class="btn btn-primary" href="">Thêm mới</a>
+                    <a class="btn btn-primary" href="<?php echo url_admin('producer/add'); ?>">Thêm mới</a>
                    
                 </ul>
             </div>
@@ -17,21 +17,29 @@
                         <thead>
                         <tr role="row">
                         <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 142px;">Name</th>
-                        <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 235px;">Position</th>
-                        <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 79px;">Salary</th>
+                        <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 235px;">logo</th>
+                        <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 79px;">status</th>
+                        <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 79px;">action</th>
                         </tr>
                         </thead>
                         <tfoot>
-                        <tr><th rowspan="1" colspan="1">Name</th>
-                        <th rowspan="1" colspan="1">Start date</th>
-                        <th rowspan="1" colspan="1">Salary</th></tr>
+                        <tr>
+                        <th rowspan="1" colspan="1">Name</th>
+                        <th rowspan="1" colspan="1">logo</th>
+                        <th rowspan="1" colspan="1">status</th>
+                        <th rowspan="1" colspan="1">action</th>
+                        </tr>
                         </tfoot>
                         <tbody>
+                        <?php foreach ($list_producer as $key => $value) {
+                            ?>
                         <tr role="row" class="odd">
-                            <td class="sorting_1">Brenden Wagner</td>
-                            <td>Software Engineer</td>
-                            <td>San Francisco</td>
+                            <td class="sorting_1"><?=$value->name?></td>
+                            <td><?=$value->logo?></td>
+                            <td><?=$value->status?></td>
+                            <td></td>
                         </tr>
+                        <?php } ?>
                         </tbody>
                     </table>
                 </div>

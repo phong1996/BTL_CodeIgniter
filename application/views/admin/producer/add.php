@@ -19,7 +19,7 @@
                 </ul>
             </div>
             <div class="body">
-                <form class="form-horizontal">
+                <form class="form-horizontal" enctype="multipart/form-data" method="post" action="<?php echo url_admin('producer/postAdd'); ?>" >
                     <div class="row clearfix">
                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
                             <label for="email_address_2">Name</label>
@@ -27,7 +27,19 @@
                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="text" id="email_address_2" class="form-control" placeholder="Enter your Name">
+                                    <input type="text" name="name" class="form-control" placeholder="Enter your Name">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="row clearfix">
+                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                            <label for="password_2">status</label>
+                        </div>
+                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7" style="margin-top: 7px;">
+                            <div class="form-group">
+                                <div class="switch">
+                                    <label><input type="checkbox" name="status" checked=""><span class="lever switch-col-blue"></span></label>
                                 </div>
                             </div>
                         </div>
@@ -39,20 +51,14 @@
                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="password" id="password_2" class="form-control" placeholder="Enter your Logo">
+                                    <input type="file" accept="image/*" name="logo" class="form-control" placeholder="Enter your Logo">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="row clearfix">
                         <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5">
-                            <input type="checkbox" id="remember_me_3" class="filled-in">
-                            <label for="remember_me_3">Remember Me</label>
-                        </div>
-                    </div>
-                    <div class="row clearfix">
-                        <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5">
-                            <button type="button" class="btn btn-primary m-t-15 waves-effect">THÊM</button>
+                            <button type="submit" class="btn btn-primary m-t-15 waves-effect">THÊM</button>
                         </div>
                     </div>
                 </form>
