@@ -40,6 +40,7 @@
 </head>
 
 <body class="theme-red">
+<div class="loading"><img src="<?php echo public_url(); ?>/images/Eclipse.gif" alt=""></div>
 <!-- Page Loader -->
 <div class="page-loader-wrapper">
     <div class="loader">
@@ -112,7 +113,7 @@
                         <li><a href="javascript:void(0);"><i class="material-icons">shopping_cart</i>Sales</a></li>
                         <li><a href="javascript:void(0);"><i class="material-icons">favorite</i>Likes</a></li>
                         <li role="seperator" class="divider"></li>
-                        <li><a href="login/logOut"><i class="material-icons">input</i>Sign Out</a></li>
+                        <li><a href="<?php echo url_admin('login/logout')?>"><i class="material-icons">input</i>Sign Out</a></li>
                     </ul>
                 </div>
             </div>
@@ -122,7 +123,7 @@
         <div class="menu">
             <ul class="list">
             <li class="header">MAIN NAVIGATION</li>
-                <li>
+                <li class="active ">
                     <a href="<?php echo url_admin('home') ?>">
                         <i class="material-icons">home</i>
                         <span>Home</span>
@@ -215,13 +216,13 @@
 <script src="<?php  echo public_url();?>/js/pages/common.js"></script>
 
 <script type="text/javascript">
-        var url=window.location.href;
-        $('.menu ul li').each(function () {
-            if($(this).find('a').attr('href')==url)
-            {
-                $(this).addClass('active');
-            }
-        })
+//        var url=window.location.href;
+//        $('.menu ul li').each(function () {
+//            if(url.indexOf($(this).find('a').attr('href'))!=-1)
+//            {
+//                $(this).addClass('active');
+//            }
+//        })
 </script>
 
 

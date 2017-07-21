@@ -158,7 +158,7 @@ class MY_Model extends CI_Model {
      */
     function get_total($input = array())
     {
-        $this->get_list_set_input($input);
+        $this->db->where($input);
 
         $query = $this->db->get($this->table);
 

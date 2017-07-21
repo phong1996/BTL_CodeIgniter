@@ -43,20 +43,38 @@ class Users extends MY_Controller {
         }else{
             $this->session->set_flashdata('flash_message', 'Thêm Không Thành Công');
         }
+    }
 
+
+    function updatePages()
+    {
+        $list = $this->User_model->get_info($this->input->get('id'));
+        $this->data['user_info'] = $list;
+        $this->data['content']='admin/Users/edit';
+        $this->load->view('admin/master',$this->data);
     }
 
     function update()
     {
-        $id = '1';
         $data = array();
-        $data['username'] = 'admin2';
-        $data['password'] = 'admin1';
-        $data['fullname'] = 'tientom2';
-        if($this->User_model->update($id, $data)) {
-            echo 'dones';
+        $data['username'] = $this->input->post('username');
+        $data['password'] = md5($this->input->post('password'));
+        $data['fullname'] = $this->input->post('fullname');
+        $data['email'] = $this->input->post('email');
+        $data['address'] = $this->input->post('address');
+        $data['phone'] = $this->input->post('sdt');
+        $data['level'] = $this->input->post('level');
+        if($this->input->get('status') == 'on'){
+            $data['status'] = 1;
         }else{
-            echo 'fail';
+            $data['status'] = 0;
+        }
+        if($this->User_model->update($this->input->post('id'),$data))
+        {
+            $this->session->set_flashdata('flash_message', 'Sửa Thành Công');
+            redirect('admin/Users/');
+        }else{
+            $this->session->set_flashdata('flash_message', 'Sửa Không Thành Công');
         }
     }
 
@@ -71,22 +89,50 @@ class Users extends MY_Controller {
         }
     }
 
-    function get_info()
+
+    function ajaxUpdateUserStatus()
     {
-        $id= 2;
-        $info = $this->User_model->get_info($id, 'username, password');
-        echo '<pre>';
-        print_r($info);
+
+        $result = $this->User_model->update($this->input->post('userId'),  ['status' => $this->input->post('user_status')]);
+
+        if($result)
+        {
+            echo 123;
+        }else{
+            echo 456;
+        }
     }
 
-    function get_list()
+    function checkuser()
     {
-        $input = array();
-        $input['like'] = array('username', 'min');
-        $input['limit'] = array(2, 0);
-        $list = $this->User_model->get_list($input);
-        echo '<pre>';
-        print_r($list);
+        if(($this->User_model->get_info($this->input->post('id'),'username')->username)==$this->input->post('username'))
+        {
+            echo "true";
+            return;
+        }
+        $result = $this->User_model->get_total(['username' => $this->input->post('username')]);
+        if($result)
+        {
+            echo "false";
+        }else{
+            echo "true";
+        }
+    }
+
+    function checkemail()
+    {
+        if(($this->User_model->get_info($this->input->post('id'),'email')->email)==$this->input->post('email'))
+        {
+            echo "true";
+            return;
+        }
+        $result = $this->User_model->get_total(['email' => $this->input->post('email')]);
+        if($result)
+        {
+            echo "false";
+        }else{
+            echo "true";
+        }
     }
 
 }
