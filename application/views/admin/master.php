@@ -216,13 +216,13 @@
 <script src="<?php  echo public_url();?>/js/pages/common.js"></script>
 
 <script type="text/javascript">
-//        var url=window.location.href;
-//        $('.menu ul li').each(function () {
-//            if(url.indexOf($(this).find('a').attr('href'))!=-1)
-//            {
-//                $(this).addClass('active');
-//            }
-//        })
+        var url=window.location.href;
+        $('.menu ul li').each(function () {
+            if(url.indexOf($(this).find('a').attr('href'))!=-1)
+            {
+                $(this).addClass('active');
+            }
+        })
 </script>
 
 

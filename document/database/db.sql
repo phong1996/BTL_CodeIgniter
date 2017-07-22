@@ -85,7 +85,8 @@ CREATE TABLE `images` (
 CREATE TABLE `producer` (
   `id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
-  `logo` varchar(100) NOT NULL
+  `logo` varchar(100) NOT NULL,
+  `status` int(1) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
