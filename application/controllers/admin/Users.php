@@ -57,23 +57,28 @@ class Users extends MY_Controller {
     function update()
     {
         $data = array();
-        $data['username'] = $this->input->post('username');
+        $data['username'] = $this->input->get('id');
         $data['password'] = md5($this->input->post('password'));
         $data['fullname'] = $this->input->post('fullname');
         $data['email'] = $this->input->post('email');
         $data['address'] = $this->input->post('address');
         $data['phone'] = $this->input->post('sdt');
         $data['level'] = $this->input->post('level');
-        if($this->input->get('status') == 'on'){
+        if($this->input->post('status') == 'on'){
             $data['status'] = 1;
         }else{
             $data['status'] = 0;
         }
-        if($this->User_model->update($this->input->post('id'),$data))
+        $id = $this->input->post('id');
+        pre($id);
+
+        if($this->User_model->update($this->input->post('id'), $data))
         {
+            echo 456;
             $this->session->set_flashdata('flash_message', 'Sửa Thành Công');
             redirect('admin/Users/');
         }else{
+            echo 123;die;
             $this->session->set_flashdata('flash_message', 'Sửa Không Thành Công');
         }
     }

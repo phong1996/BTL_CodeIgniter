@@ -20,7 +20,7 @@
             </div>
             <div class="body">
                 <form class="form-horizontal" id="frm-regis" action="update" method="post">
-                    <input type="hidden" value="<?php echo $user_info->id ?>" id="id">
+                    <input type="hidden" name="id" value="<?php echo $user_info->id ?>" id="id">
                     <div class="row clearfix">
                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
                             <label for="email_address_2">Tài Khoản</label>
