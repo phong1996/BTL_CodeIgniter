@@ -1,10 +1,10 @@
 $('body').on('change', '#producer_status',function () {
 	var id=$(this).attr('producer_id');
-	// $.ajax({
-	// 	url: '',
-	// 	type: 'POST',
-	// 	data: {id: id},
-	// });
+	$.ajax({
+		url: '',
+		type: 'POST',
+		data: {id: id},
+	});
 	
 })
 
