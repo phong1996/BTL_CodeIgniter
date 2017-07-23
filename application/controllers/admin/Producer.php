@@ -38,14 +38,12 @@ class Producer extends MY_Controller {
          $this->load->library("upload", $config);
             if($this->upload->do_upload("logo"))
             {
-
-                
                 $data['logo'] ='';
             }
             else{
                 pre('die');
             }
-            
+
         if($this->Producer_model->create($data))
         {
             $this->session->set_flashdata('flash_message', 'Thêm Thành Công');

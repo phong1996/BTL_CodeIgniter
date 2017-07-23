@@ -57,7 +57,7 @@ class Users extends MY_Controller {
     function update()
     {
         $data = array();
-        $data['username'] = $this->input->get('id');
+        $data['username'] = $this->input->post('username');
         $data['password'] = md5($this->input->post('password'));
         $data['fullname'] = $this->input->post('fullname');
         $data['email'] = $this->input->post('email');
@@ -70,15 +70,11 @@ class Users extends MY_Controller {
             $data['status'] = 0;
         }
         $id = $this->input->post('id');
-        pre($id);
-
-        if($this->User_model->update($this->input->post('id'), $data))
+        if($this->User_model->update($id, $data))
         {
-            echo 456;
             $this->session->set_flashdata('flash_message', 'Sửa Thành Công');
-            redirect('admin/Users/');
+            redirect('admin/users/');
         }else{
-            echo 123;die;
             $this->session->set_flashdata('flash_message', 'Sửa Không Thành Công');
         }
     }

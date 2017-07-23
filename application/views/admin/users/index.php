@@ -56,30 +56,29 @@
                         </tfoot>
                         <tbody>
                         <?php
-                           foreach($list_user as $key => $li)
-                            {
-                                /*if($li->level == 0)
-                                {*/
-                                ?>
-                                <tr role="row" class="even">
-                                    <td class="sorting_1"><?php echo $li->id ?></td>
-                                    <td><?php echo $li->username ?></td>
-                                    <td><?php echo $li->fullname ?></td>
-                                    <td><?php echo $li->email ?></td>
-                                    <td><?php echo $li->address ?></td>
-                                    <td><?php echo $li->phone ?></td>
-                                    <td>Khách Hàng</td>
-                                    <td>
-                                        <div class="switch">
-                                            <label><input type="checkbox" class="user_status" name="status" user_id = "<?php echo $li->id?>" <?php echo ($li->status == 0)?'':'checked' ?> ><span class="lever switch-col-blue"></span></label>
-                                        </div>
-                                        </td>
-                                    <td><?php echo $li->created_at ?></td>
-                                    <td><a href="<?php echo url_admin('users/delete'); ?>?id=<?php echo $li->id ?>"><i class="fa fa-trash-o" aria-hidden="true"></i></a><a href="<?php echo url_admin('users/updatePages'); ?>?id=<?php echo $li->id ?>"><i style="margin-left: 18px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
-                                </tr>
-                                <?php
-                               /*}*/
-                            }
+                           foreach($list_user as $key => $li) {
+
+                               ?>
+                               <tr role="row" class="even">
+                                   <td class="sorting_1"><?php echo $li->id ?></td>
+                                   <td><?php echo $li->username ?></td>
+                                   <td><?php echo $li->fullname ?></td>
+                                   <td><?php echo $li->email ?></td>
+                                   <td><?php echo $li->address ?></td>
+                                   <td><?php echo $li->phone ?></td>
+                                   <td>Khách Hàng</td>
+                                   <td>
+                                       <div class="switch">
+                                           <label><input type="checkbox" class="user_status" name="status"
+                                                         user_id="<?php echo $li->id ?>" <?php echo ($li->status == 0) ? '' : 'checked' ?> ><span
+                                                   class="lever switch-col-blue"></span></label>
+                                       </div>
+                                   </td>
+                                   <td><?php echo $li->created_at ?></td>
+                                   <td><a href="<?php echo url_admin('users/delete'); ?>?id=<?php echo $li->id ?>"><i class="fa fa-trash-o" aria-hidden="true"></i></a><a href="<?php echo url_admin('users/updatePages'); ?>?id=<?php echo $li->id ?>"><i style="margin-left: 18px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+                               </tr>
+                               <?php
+                           }
                         ?>
                         </tbody>
                     </table>

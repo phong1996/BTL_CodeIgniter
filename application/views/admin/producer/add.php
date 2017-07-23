@@ -5,6 +5,7 @@
                 <h2>
                     THÊM NHÀ SẢN XUẤT
                 </h2>
+                <?php if(isset($error)){echo $error;} ?>
                 <ul class="header-dropdown m-r--5">
                     <li class="dropdown">
                         <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
