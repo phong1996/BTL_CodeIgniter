@@ -153,10 +153,7 @@
 </section>
 
 <section class="content">
-
     <?php $this->load->view($content) ?>
-
-
 </section>
 
 <!-- Jquery Core Js -->
