@@ -146,6 +146,12 @@
                         <i class="material-icons">contacts</i>
                         <span>Quản lý liên hệ</span>
                     </a>
+                 </li>
+                <li>
+                    <a href="<?php echo url_admin('slide') ?>">
+                        <i class="material-icons">android</i>
+                        <span>Quản lý Silde</span>
+                    </a>
                 </li>
             </ul>
         </div>
