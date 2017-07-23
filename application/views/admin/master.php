@@ -40,7 +40,7 @@
 </head>
 
 <body class="theme-red">
-<div class="loading"><img src="<?php echo public_url(); ?>/images/Eclipse.gif" alt=""></div>
+<!-- <div class="loading"><img src="<?php echo public_url(); ?>/images/Eclipse.gif" alt=""></div> -->
 <!-- Page Loader -->
 <div class="page-loader-wrapper">
     <div class="loader">
@@ -141,6 +141,12 @@
                         <span>Quản lý nhà sản xuất</span>
                     </a>
                 </li>
+                 <li>
+                    <a href="<?php echo url_admin('contacts') ?>">
+                        <i class="material-icons">contacts</i>
+                        <span>Quản lý liên hệ</span>
+                    </a>
+                </li>
             </ul>
         </div>
         <!-- #Menu -->
@@ -211,7 +217,8 @@
 <script src="<?php  echo public_url();?>/js/pages/forms/basic-form-elements.js"></script>
 <script src="<?php  echo public_url();?>/js/pages/jquery.validate.min.js"></script>
 <script src="<?php  echo public_url();?>/js/pages/common.js"></script>
-
+<script src="<?php  echo public_url();?>/js/pages/validate_producer.js"></script>
+<script src="<?php  echo public_url();?>/js/pages/validate_edit_producer.js"></script>
 <script type="text/javascript">
         var url=window.location.href;
         $('.menu ul li').each(function () {

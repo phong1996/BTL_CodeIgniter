@@ -35,9 +35,18 @@
                             ?>
                         <tr role="row" class="odd">
                             <td class="sorting_1"><?=$value->name?></td>
-                            <td><?=$value->logo?></td>
-                            <td><?=$value->status?></td>
-                            <td></td>
+                            <td><img src="../<?=$value->logo?>" width=100></td>
+                            <td>
+                                <div class="switch">
+                                    <label>
+                                        <input type="checkbox" id="producer_status" producer_id="<?php echo $value->id?>" <?php echo ($value->status == 0)?'':'checked' ?> >
+                                        <span class="lever switch-col-blue"></span>
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <a href="<?php echo url_admin('producer/delete'); ?>/<?php echo $value->id ?>"><i class="fa fa-trash-o" aria-hidden="true"></i></a><a href="<?php echo url_admin('producer/edit'); ?>/<?php echo $value->id ?>"><i style="margin-left: 18px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                            </td>
                         </tr>
                         <?php } ?>
                         </tbody>
