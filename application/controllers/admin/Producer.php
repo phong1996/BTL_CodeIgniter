@@ -30,21 +30,22 @@ class Producer extends MY_Controller {
         }
 
          $config['upload_path'] = public_url().'/images';
-         $config['allowed_types'] = 'gif|jpg|png';
+         $config['allowed_types'] = 'jpg|jpeg|png|gif';
+         $config['file_name'] = $_FILES['logo']['name'];
          $config['max_size'] = '2000';
          $config['max_width']  = '1224';
          $config['max_height']  = '768';
-            $this->load->library("upload", $config);
+         $this->load->library("upload", $config);
             if($this->upload->do_upload("logo"))
             {
+
+                
                 $data['logo'] ='';
             }
             else{
                 pre('die');
             }
             
-
-
         if($this->Producer_model->create($data))
         {
             $this->session->set_flashdata('flash_message', 'Thêm Thành Công');

@@ -39,7 +39,7 @@ class Users extends MY_Controller {
         if($this->User_model->create($data))
         {
             $this->session->set_flashdata('flash_message', 'Thêm Thành Công');
-            redirect('admin/Users/');
+            redirect('admin/users/');
         }else{
             $this->session->set_flashdata('flash_message', 'Thêm Không Thành Công');
         }
@@ -88,7 +88,7 @@ class Users extends MY_Controller {
         if($this->User_model->delete($this->input->get('id')))
         {
             $this->session->set_flashdata('flash_message', 'Xóa Thành Công');
-            redirect('admin/Users/');
+            redirect('admin/users/');
         }else{
             $this->session->set_flashdata('flash_message', 'Xóa Không Thành Công');
         }
