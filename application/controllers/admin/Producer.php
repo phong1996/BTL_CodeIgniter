@@ -32,12 +32,13 @@ class Producer extends MY_Controller {
          $config['upload_path'] = './images/logo';
          $config['allowed_types'] = 'jpg|jpeg|png|gif';
          $config['file_name'] = time().$_FILES['logo']['name'];
-         $config['max_size'] = '2000';
-         $config['max_width']  = '1224';
-         $config['max_height']  = '768';
+         $config['max_size'] = '10240';
+         $config['max_width']  = '5000';
+         $config['max_height']  = '5000';
          $this->load->library("upload", $config);
             if($this->upload->do_upload("logo"))
             {
+                $data['logo'] = 'images/logo/'.$config['file_name'];
             }
             else{
                 pre('die');
@@ -99,24 +100,24 @@ class Producer extends MY_Controller {
             $data['status'] = 0;
         }
 
-        if (empty($_FILES['logo'])) 
+        if (empty($_FILES['logo']['name']))
         {
             $data['logo']=$this->Producer_model->get_info($this->input->post('id'),'logo')->logo;
         }
         else
         {
+
             unlink($this->Producer_model->get_info($this->input->post('id'),'logo')->logo);
 
             $config['upload_path'] = './images/logo';
             $config['allowed_types'] = 'jpg|jpeg|png|gif';
             $config['file_name'] = time().$_FILES['logo']['name'];
-            $config['max_size'] = '2000';
-            $config['max_width']  = '1224';
-            $config['max_height']  = '768';
+            $config['max_size'] = '10240';
+            $config['max_width']  = '3500';
+            $config['max_height']  = '3500';
             $this->load->library("upload", $config);
             if($this->upload->do_upload("logo"))
             {
-
                 $data['logo'] ='images/logo/'. $config['file_name'];
             }
             else{

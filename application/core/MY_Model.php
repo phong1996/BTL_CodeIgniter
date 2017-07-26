@@ -270,6 +270,12 @@ class MY_Model extends CI_Model {
         }
     }
 
+    function join()
+    {
+        $query = $this->db->query("select p.id, p.name AS name_pr, pc.name, p.price, p.quantyti, p.avatar, p.sale_off, p.views, p.description, p.status from `products` AS p INNER JOIN `producer` AS pc ON p.id_producer = pc.id");
+        return $query->result();
+    }
+
 }
 ?>
 

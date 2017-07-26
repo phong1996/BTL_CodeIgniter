@@ -6,6 +6,7 @@ class Login extends MY_Controller {
     {
         parent::__construct();
         $this->load->model('Login_model');
+
     }
 	public function index()
 	{
@@ -15,9 +16,33 @@ class Login extends MY_Controller {
     {
         $username = $this->input->post('username');
         $password = $this->input->post('password');
+
         $password = md5($password);
         if($this->Login_model->checklogin($username,$password))
         {
+
+            if(!empty($this->input->post('remember')))
+            {
+                $this->load->helper('cookie');
+                $cookie['user'] = array(
+                    'name'   => 'user',
+                    'value'  => $username,
+                    'expire' => time() + 15,
+                    'domain' => 'localhost',
+                    'path'   => '/',
+                );
+                $cookie['pass'] = array(
+                    'name'   => 'pass',
+                    'value'  => $password,
+                    'expire' => time() + 15,
+                    'domain' => 'localhost',
+                    'path'   => '/',
+                );
+                $this->input->set_cookie($cookie['user']);
+                $this->input->set_cookie($cookie['pass']);
+            }
+
+
             $where = array('username' => $username, 'password' => $password);
             $user = $this->Login_model->get_info_rule($where);
             $this->session->set_userdata('user_login', $user);
@@ -34,6 +59,10 @@ class Login extends MY_Controller {
 
     public function logOut()
     {
+        $this->load->helper('cookie');
+        delete_cookie('user');
+        delete_cookie('pass');
+        delete_cookie('g');
         $this->session->unset_userdata("user_login");
         redirect('admin/login');
     }

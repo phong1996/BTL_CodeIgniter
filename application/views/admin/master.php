@@ -126,7 +126,7 @@
                 <li>
                     <a href="<?php echo url_admin('home') ?>">
                         <i class="material-icons">home</i>
-                        <span>Home</span>
+                        <span>Thống kê</span>
                     </a>
                 </li>
                 <li>
@@ -151,6 +151,18 @@
                     <a href="<?php echo url_admin('slide') ?>">
                         <i class="material-icons">android</i>
                         <span>Quản lý Silde</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo url_admin('Technews') ?>">
+                        <i class="material-icons">fiber_new</i>
+                        <span>Quản lý tin tức</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo url_admin('products') ?>">
+                        <i class="material-icons">assignment</i>
+                        <span>Quản lý sản phẩm</span>
                     </a>
                 </li>
             </ul>
@@ -225,6 +237,7 @@
 <script src="<?php  echo public_url();?>/js/pages/common.js"></script>
 <script src="<?php  echo public_url();?>/js/pages/validate_producer.js"></script>
 <script src="<?php  echo public_url();?>/js/pages/validate_edit_producer.js"></script>
+<script src="//cdn.ckeditor.com/4.7.1/full/ckeditor.js"></script>
 <script type="text/javascript">
         var url=window.location.href;
         $('.menu ul li').each(function () {
@@ -233,8 +246,9 @@
                 $(this).addClass('active');
             }
         })
+        CKEDITOR.replace( 'content' );
 </script>
-
+ 
 
 </body>
 

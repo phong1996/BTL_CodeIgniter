@@ -35,7 +35,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<input type="password" name="password" placeholder="password" />
 						<div class="remember">
 			             <span class="checkbox1">
-							   <label class="checkbox"><input type="checkbox" name="" checked=""><i> </i>Remember me</label>
+							   <label class="checkbox"><input type="checkbox" name="remember" ><i> </i>Remember me</label>
 						 </span>
 						 <div class="forgot">
 						 	<h6><a href="#">Forgot Password?</a></h6>

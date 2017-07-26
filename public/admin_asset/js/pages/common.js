@@ -22,6 +22,48 @@ var url_root = 'http://localhost/BTL_CodeIgniter/';
         })
     });
 
+    $(".slide_status").click(function () {
+        var slide_status = 0;
+        if ($(this).prop('checked') === true) {
+            slide_status = 1;
+        } else {
+            slide_status = 0;
+        }
+        $.ajax({
+            type: "post",
+            dataType: "json",
+            url: url_root + "admin/slide/ajaxUpdateSlideStatus",
+            data: {slideId: $(this).attr('slide_id'), slide_status: slide_status},
+            beforeSend: function () {
+                $('.loading').show();
+            },
+            success: function (result) {
+                $('.loading').hide();
+            }
+        })
+    });
+
+    $(".news_status").click(function () {
+        var news_status = 0;
+        if ($(this).prop('checked') === true) {
+            news_status = 1;
+        } else {
+            news_status = 0;
+        }
+        $.ajax({
+            type: "post",
+            dataType: "json",
+            url: url_root + "admin/Technews/ajaxUpdateNewsStatus",
+            data: {newsId: $(this).attr('news_id'), news_status: news_status},
+            beforeSend: function () {
+                $('.loading').show();
+            },
+            success: function (result) {
+                $('.loading').hide();
+            }
+        })
+    });
+
 
     jQuery.validator.addMethod("special_character", function (value, element) {
         return /[a-zA-Z0-9]+$/.test(value);
@@ -127,6 +169,175 @@ var url_root = 'http://localhost/BTL_CodeIgniter/';
                 }
             }
     });
+    $("#form_slide").validate({
+    rules: {
+        images: {
+            required: true
+        },
+        link: {
+            required: true,
+            minlength: 6,
+            maxlength: 50
+        }
+    },
+    messages: {
+        images: {
+            required: 'Vui lòng chọn ảnh!',
+        },
+        link: {
+            required: 'Vui lòng nhập link!',
+            minlength: 'Tối thiểu 6 ký tự!',
+            maxlength: 'Tối đa 50 ký tự!'
+        }
+    }
+});
+    $("#form_slide_edit").validate({
+    rules: {
+        link: {
+            required: true,
+            minlength: 6,
+            maxlength: 50
+        }
+    },
+    messages: {
+        link: {
+            required: 'Vui lòng nhập link!',
+            minlength: 'Tối thiểu 6 ký tự!',
+            maxlength: 'Tối đa 50 ký tự!'
+        }
+    }
+});
+    $("#frm-news-add").validate({
+        rules: {
+            title: {
+                required: true
+            },
+            intro: {
+                required: true
+            },
+            content: {
+                required: true
+            },
+            images: {
+                required: true
+            }
+        },
+        messages: {
+            title: {
+                required: 'Vui lòng nhập tên tiêu đề!'
+            },
+            intro: {
+                required: 'Vui lòng nhập giới thiệu!'
+            },
+            content: {
+                required: 'Vui lòng nhập nội dung!'
+            },
+            images: {
+                required: 'Vui lòng chọn hình ảnh!'
+            }
+        }
+});
+$("#frm_pr_ad").validate({
+        rules: {
+            producer: {
+                required: true
+            },
+            name: {
+                required: true
+            },
+            price: {
+                required: true
+            },
+            quantyti: {
+                required: true
+            },
+            images: {
+                required: true
+            },
+            sale_off: {
+                required: true
+            },
+            description: {
+                required: true
+            },
+            display: {
+                required: true
+            },
+            camera: {
+                required: true
+            },
+            operating: {
+                required: true
+            },
+            storage: {
+                required: true
+            },
+            network: {
+                required: true
+            },
+            design: {
+                required: true
+            },
+            battery: {
+                required: true
+            },
+            utilities: {
+                required: true
+            }
+        },
+        messages: {
+            producer: {
+                required: 'Không được bỏ trống'
+            },
+            name: {
+                required: 'Không được bỏ trống'
+            },
+            price: {
+                required: 'Không được bỏ trống'
+            },
+            quantyti: {
+                required: 'Không được bỏ trống'
+            },
+            images: {
+                required: 'Không được bỏ trống'
+            },
+            sale_off: {
+                required: 'Không được bỏ trống'
+            },
+            description: {
+                required: 'Không được bỏ trống'
+            },
+            display: {
+                required: 'Không được bỏ trống'
+            },
+            camera: {
+                required: 'Không được bỏ trống'
+            },
+            operating: {
+                required: 'Không được bỏ trống'
+            },
+            storage: {
+                required: 'Không được bỏ trống'
+            },
+            network: {
+                required: 'Không được bỏ trống'
+            },
+            design: {
+                required: 'Không được bỏ trống'
+            },
+            battery: {
+                required: 'Không được bỏ trống'
+            },
+            utilities: {
+                required: 'Không được bỏ trống'
+            }
+        }
+});
+
+$('#file_edit').change(function(event) {
+    $('#image').attr('src',URL.createObjectURL(event.target.files[0]));
+});
+
 
 
 

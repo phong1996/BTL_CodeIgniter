@@ -3,8 +3,9 @@
         <div class="card">
             <div class="header">
                 <h2>
-                    SỬA NHÀ SẢN XUẤT
+                    THÊM SLIDE
                 </h2>
+                <?php if(isset($error)){echo $error;} ?>
                 <ul class="header-dropdown m-r--5">
                     <li class="dropdown">
                         <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -19,52 +20,49 @@
                 </ul>
             </div>
             <div class="body">
-                <form class="form-horizontal" id="form_producer_edit" enctype="multipart/form-data" method="post" action="<?php echo url_admin('producer/postEdit'); ?>" >
-                <input type="hidden" id="id" name="id" value="<?php echo $producer->id; ?>">
+                <form class="form-horizontal" id="form_slide" enctype="multipart/form-data" method="post" action="<?php echo url_admin('slide/postAdd'); ?>" >
+                    <input type="hidden" name="id" value="">
                     <div class="row clearfix">
                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                            <label for="email_address_2">Name</label>
+                            <label for="password_2">Images</label>
                         </div>
                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="text" required value="<?php echo $producer->name ?>" name="name" id="name" class="form-control" placeholder="Tên nhà sản xuất">
+  <!--                                  <img id="image" src="<?php /*echo base_url().'images/slide/'.$_FILES['image']['name']; */?>" width=100>-->
+                                    <input type="file" accept="image/*" required name="image" id="image" class="form-control" placeholder="Enter your Logo">
                                 </div>
                             </div>
                         </div>
                     </div>
-                     <div class="row clearfix">
+                    <div class="row clearfix">
                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                            <label for="password_2">status</label>
+                            <label for="email_address_2">Link</label>
+                        </div>
+                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <input type="text" name="link" id="link" class="form-control" placeholder="www.abcxyz.com...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix">
+                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                            <label for="password_2">Status</label>
                         </div>
                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7" style="margin-top: 7px;">
                             <div class="form-group">
                                 <div class="switch">
-                                    <label><input type="checkbox" name="status" <?php echo ($producer->status==0)?'':'checked'; ?>><span class="lever switch-col-blue"></span></label>
+                                    <label><input type="checkbox" name="status" checked=""><span class="lever switch-col-blue"></span></label>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-md-offset-2" style="margin-bottom: 10px">
-                        <img id="img_logo" src="../../../<?php echo $producer->logo; ?>" width=100>
-                    </div>
-
-                    <div class="row clearfix">
-                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                            <label for="password_2">Logo</label>
-                        </div>
-                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                            <div class="form-group">
-                                <div class="form-line">
-                                    <input type="file" id="file_edit" accept="image/*" name="logo" class="form-control" placeholder="Enter your Logo">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="row clearfix">
                         <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5">
-                            <button type="submit" class="btn btn-primary m-t-15 waves-effect">SỬA</button>
+                            <button type="submit" class="btn btn-primary m-t-15 waves-effect">THÊM</button>
                         </div>
                     </div>
                 </form>
