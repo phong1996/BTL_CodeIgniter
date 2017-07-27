@@ -98,21 +98,6 @@ var url_root = 'http://localhost/BTL_CodeIgniter/';
 
     $("#frm-regis").validate({
         rules: {
-            username: {
-                required: true,
-                minlength: 6,
-                maxlength: 50,
-                remote: {
-                    url: url_root +"admin/Users/checkuser",
-                    type: "post",
-                    data: {
-                        username: function () {
-                            return $("#username").val();
-                        },
-                        id:$('#id').val(),
-                    }
-                }
-                },
                 password: {
                     required: true,
                     minlength: 6,
@@ -123,20 +108,6 @@ var url_root = 'http://localhost/BTL_CodeIgniter/';
                     minlength: 6,
                     maxlength: 50
 
-                },
-                email: {
-                    required: true,
-                    email: true,
-                    remote: {
-                        url: url_root +"admin/Users/checkemail",
-                        type: "post",
-                        data: {
-                            email: function () {
-                                return $("#email").val();
-                            },
-                            id:$('#id').val(),
-                        }
-                    }
                 },
                 address: {
                     required: true,
@@ -151,12 +122,7 @@ var url_root = 'http://localhost/BTL_CodeIgniter/';
                 }
             },
             messages: {
-                username: {
-                    required: 'Vui lòng nhập tên tài khoản!',
-                    minlength: 'Tối thiểu 6 ký tự!',
-                    maxlength: 'Tối đa 50 ký tự!',
-                    remote: 'Tài khoản đã tồn tại'
-                },
+                
                 password: {
                     required: 'Vui lòng nhập mật khẩu!',
                     minlength: 'Tối thiểu 6 ký tự!',
@@ -166,11 +132,6 @@ var url_root = 'http://localhost/BTL_CodeIgniter/';
                     required: 'Vui lòng nhập họ và tên!',
                     minlength: 'Tối thiểu 6 ký tự!',
                     maxlength: 'Tối đa 50 ký tự!'
-                },
-                email: {
-                    required: 'Vui lòng nhập email!',
-                    email: 'Định dạng email không đúng, xin vui lòng nhập lại!',
-                    remote: 'Email đã tồn tại'
                 },
                 address: {
                     required: 'Vui lòng nhập địa chỉ!',
@@ -349,6 +310,60 @@ $("#frm_pr_add").validate({
             }
         }
 });
+
+$("#frm_edit").validate({
+        rules: {
+            id_users: {
+                required: true
+            },
+            cus_name: {
+                required: true
+            },
+            cus_phone: {
+                required: true
+            },
+            cus_email: {
+                required: true
+            },
+            cus_adress: {
+                required: true
+            },
+            total_price: {
+                required: true
+            },
+            created_at: {
+                required: true
+            }
+            
+        },
+        messages: {
+            id_users: {
+                required: 'Không được bỏ trống'
+            },
+            cus_name: {
+                required: 'Không được bỏ trống'
+            },
+            cus_phone: {
+                required: 'Không được bỏ trống'
+            },
+            cus_email: {
+                required: 'Không được bỏ trống'
+            },
+            cus_adress: {
+                required: 'Không được bỏ trống'
+            },
+            total_price: {
+                required: 'Không được bỏ trống'
+            },
+            created_at: {
+                required: 'Không được bỏ trống'
+            },
+            display: {
+                required: 'Không được bỏ trống'
+            }
+        }
+});
+
 
 $('#file_edit').change(function(event) {
     $('#image').attr('src',URL.createObjectURL(event.target.files[0]));

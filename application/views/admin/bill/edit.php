@@ -3,7 +3,7 @@
         <div class="card">
             <div class="header">
                 <h2>
-                    THÊM ĐƠN HÀNG
+                    SỬA ĐƠN HÀNG
                 </h2>
                 <ul class="header-dropdown m-r--5">
                     <li class="dropdown">
@@ -19,7 +19,8 @@
                 </ul>
             </div>
             <div class="body">
-                <form class="form-horizontal" method="get" action="create">
+                <form class="form-horizontal" id="frm_edit" action="update" method="post">
+                    <input type="hidden" name="id" value="<?php echo $user_info->id ?>" id="id">
                     <div class="row clearfix">
                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
                             <label for="email_address_2">Id_users</label>
@@ -27,7 +28,7 @@
                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="text"  name="id_users" class="form-control" placeholder="Enter your Id_users">
+                                    <input type="text"  name="id_users" value="<?php echo $user_info->id_users ?>" class="form-control" placeholder="Enter your Id_users">
                                 </div>
                             </div>
                         </div>
@@ -39,7 +40,7 @@
                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="text" name="cus_name" class="form-control" placeholder="Enter your Cus_name">
+                                    <input type="text" name="cus_name" value="<?php echo $user_info->cus_name ?>" class="form-control" placeholder="Enter your Cus_name">
                                 </div>
                             </div>
                         </div>
@@ -51,7 +52,7 @@
                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="text" name="cus_phone" class="form-control" placeholder="Enter your Cus_phone">
+                                    <input type="text" name="cus_phone" value="<?php echo $user_info->cus_phone ?>" class="form-control" placeholder="Enter your Cus_phone">
                                 </div>
                             </div>
                         </div>
@@ -63,7 +64,7 @@
                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="text"  name="cus_email" class="form-control" placeholder="Enter your Cus_email">
+                                    <input type="text"  name="cus_email" value="<?php echo $user_info->cus_email ?>" class="form-control" placeholder="Enter your Cus_email">
                                 </div>
                             </div>
                         </div>
@@ -75,7 +76,7 @@
                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="text"  name="cus_adress" class="form-control" placeholder="Enter your Cus_adress">
+                                    <input type="text"  name="cus_adress" value="<?php echo $user_info->cus_adress ?>" class="form-control" placeholder="Enter your Cus_adress">
                                 </div>
                             </div>
                         </div>
@@ -87,7 +88,7 @@
                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="text" name="total_price" class="form-control" placeholder="Enter your Total_price">
+                                    <input type="text" name="total_price" value="<?php echo $user_info->total_price ?>" class="form-control" placeholder="Enter your Total_price">
                                 </div>
                             </div>
                         </div>
@@ -99,7 +100,7 @@
                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="text"  name="created_at" class="form-control" placeholder="Enter your Created_at">
+                                    <input type="text"  name="created_at" value="<?php echo $user_info->created_at ?>" class="form-control" placeholder="Enter your Created_at">
                                 </div>
                             </div>
                         </div>
@@ -114,7 +115,7 @@
                     
                     <div class="row clearfix">
                         <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5">
-                            <button type="submit" class="btn btn-primary m-t-15 waves-effect">THÊM</button>
+                            <button type="submit" class="btn btn-primary m-t-15 waves-effect">SỬA</button>
                         </div>
                     </div>
                 </form>
