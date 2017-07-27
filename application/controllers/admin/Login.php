@@ -10,31 +10,35 @@ class Login extends MY_Controller {
     }
 	public function index()
 	{
+        if(isset($_COOKIE['user']) && isset($_COOKIE['pass'])){
+            return redirect('admin/home');
+        }
 		$this->load->view('admin/login/login');
 	}
 	 public function login()
     {
         $username = $this->input->post('username');
-        $password = $this->input->post('password');
+        $passwords = $this->input->post('password');
 
-        $password = md5($password);
+        $password = md5($passwords);
+
         if($this->Login_model->checklogin($username,$password))
         {
 
-            if(!empty($this->input->post('remember')))
+            if($this->input->post('remember') != '')
             {
                 $this->load->helper('cookie');
                 $cookie['user'] = array(
                     'name'   => 'user',
                     'value'  => $username,
-                    'expire' => time() + 15,
+                    'expire' => 60 * 60 * 24,
                     'domain' => 'localhost',
                     'path'   => '/',
                 );
                 $cookie['pass'] = array(
                     'name'   => 'pass',
-                    'value'  => $password,
-                    'expire' => time() + 15,
+                    'value'  => $passwords,
+                    'expire' => 60 * 60 * 24,
                     'domain' => 'localhost',
                     'path'   => '/',
                 );

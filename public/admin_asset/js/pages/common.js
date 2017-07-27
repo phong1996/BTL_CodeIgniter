@@ -64,6 +64,21 @@ var url_root = 'http://localhost/BTL_CodeIgniter/';
         })
     });
 
+    $(".img").click(function(){
+        $.ajax({
+           type: "post",
+            dataType: "json",
+            url: url_root + "admin/Products/ajaxDeleteImage",
+            data:{imgId: $(this).attr('img_id')},
+            beforeSend: function () {
+                $('.loading').show();
+            },
+            success: function () {
+                location.reload();
+            }
+        });
+    });
+
 
     jQuery.validator.addMethod("special_character", function (value, element) {
         return /[a-zA-Z0-9]+$/.test(value);

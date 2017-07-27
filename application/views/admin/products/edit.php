@@ -1,3 +1,4 @@
+
 <div class="row clearfix">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="card">
@@ -65,18 +66,33 @@
                             </div>
                         </div>
                     </div>
-                    <!--<div class="row clearfix">
+                    <div class="row clearfix">
+                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                            <div class="form-group" style="margin-left: 290px;">
+                                <div class="form-line">
+                                   <?php
+                                   for($i = 0; $i <= $count_images-1; $i++ ) {
+                                       ?>
+                                        <img id="image" img_id="<?php echo $list_images[$i]->id ?>"  class="img" src="<?php echo base_url() . 'images/products/' . $list_images[$i]->name ?>" width="100" height="70px" style="border: 3px solid sandybrown; hover" >
+                                       <?php
+                                   }
+                                   ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix">
                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
                             <label for="password_2">Avatar</label>
                         </div>
                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="file" accept="image/*" name="images[]" multiple id="images"  required class="form-control" placeholder="Enter your image">
+                                    <input type="file" accept="image/*" name="images[]" multiple id="images"  class="form-control" placeholder="Enter your image">
                                 </div>
                             </div>
                         </div>
-                    </div>-->
+                    </div>
                     <div class="row clearfix">
                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
                             <label for="password_2">Sale_Off</label>

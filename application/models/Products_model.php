@@ -15,7 +15,7 @@ Class Products_model extends MY_Model
 
     public function get_info_image($id)
     {
-       $query = 'select * from `images` WHERE id_products = "'.$id.'" ';
-        return  $query;
+       $query = $this->db->query('select * from `images` WHERE id_products = "'.$id.'"');
+        return $query;
     }
 }

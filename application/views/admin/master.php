@@ -35,6 +35,10 @@
     <link href="<?php echo public_url(); ?>/css/themes/all-themes.css" rel="stylesheet" />
     <link href="<?php echo public_url(); ?>/icon/css/font-awesome.min.css" rel="stylesheet" />
 
+<!--    <link rel="shortcut icon" href="../favicon.ico">-->
+
+
+
 
 
 </head>
@@ -126,7 +130,7 @@
                 <li>
                     <a href="<?php echo url_admin('home') ?>">
                         <i class="material-icons">home</i>
-                        <span>Thống kê</span>
+                        <span>Thống kê x</span>
                     </a>
                 </li>
                 <li>
@@ -166,8 +170,9 @@
                     </a>
                 </li>
                 <li>
-                    <a href="<?php echo url_admin('Bill') ?>">
-                        <i class="material-icons">picture_in_picture</i>
+
+                    <a href="<?php echo url_admin('bill') ?>">
+                        <i class="material-icons">assignment</i>
                         <span>Quản lý đơn hàng</span>
                     </a>
                 </li>
@@ -253,6 +258,8 @@
             }
         })
         CKEDITOR.replace( 'content' );
+
+
 </script>
  
 
