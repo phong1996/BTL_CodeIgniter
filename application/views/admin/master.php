@@ -35,6 +35,10 @@
     <link href="<?php echo public_url(); ?>/css/themes/all-themes.css" rel="stylesheet" />
     <link href="<?php echo public_url(); ?>/icon/css/font-awesome.min.css" rel="stylesheet" />
 
+<!--    <link rel="shortcut icon" href="../favicon.ico">-->
+
+
+
 
 
 </head>

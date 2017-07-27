@@ -73,7 +73,7 @@
                                    <?php
                                    for($i = 0; $i <= $count_images-1; $i++ ) {
                                        ?>
-                                        <img id="image"  class="img" src="<?php echo base_url() . 'images/products/' . $list_images[$i]->name ?>" width="100" style="border: 3px solid sandybrown; hover" >
+                                        <img id="image" img_id="<?php echo $list_images[$i]->id ?>"  class="img" src="<?php echo base_url() . 'images/products/' . $list_images[$i]->name ?>" width="100" height="70px" style="border: 3px solid sandybrown; hover" >
                                        <?php
                                    }
                                    ?>
@@ -88,7 +88,7 @@
                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="file" accept="image/*" name="images[]" multiple id="images"  required class="form-control" placeholder="Enter your image">
+                                    <input type="file" accept="image/*" name="images[]" multiple id="images"  class="form-control" placeholder="Enter your image">
                                 </div>
                             </div>
                         </div>

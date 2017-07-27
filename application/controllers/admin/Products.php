@@ -116,8 +116,52 @@ class Products extends MY_Controller {
 		$this->load->view('admin/master',$this->data);
 	}
 
+	public function ajaxDeleteImage()
+	{
+		$img_name = $this->Images_model->get_info_image_name($this->input->post('imgId'));
+		unlink($_SERVER['DOCUMENT_ROOT'].'/BTL_CodeIgniter/images/products/'.$img_name->name);
+		$result = $this->Images_model->delete($this->input->post('imgId'));
+		if($result){
+			echo 1;
+		}else {
+			echo 2;
+		}
+	}
+
 	public function postEdit()
 	{
+		if(!empty($_FILES['images']['name'][0])) {
+
+			$config = array();
+			$config['upload_path'] = './images/products';
+			$config['allowed_types'] = 'jpg|png|gif|jpeg';
+			$config['max_size'] = '10240';
+			$config['max_width'] = '4000';
+			$config['max_height'] = '4000';
+			$file = $_FILES['images'];
+			$count = count($file['name']);//lấy tổng số file được upload
+			for ($i = 0; $i <= $count - 1; $i++) {
+				$_FILES['userfile']['name'] = $file['name'][$i];  //khai báo tên của file thứ i
+				$_FILES['userfile']['type'] = $file['type'][$i]; //khai báo kiểu của file thứ i
+				$_FILES['userfile']['tmp_name'] = $file['tmp_name'][$i]; //khai báo đường dẫn tạm của file thứ i
+				$_FILES['userfile']['error'] = $file['error'][$i]; //khai báo lỗi của file thứ i
+				$_FILES['userfile']['size'] = $file['size'][$i]; //khai báo kích cỡ của file thứ i
+				$this->load->library('upload', $config);
+				if ($this->upload->do_upload()) {
+
+				}
+			}
+
+			if ($count != 0) {
+				for ($i = 0; $i <= $count - 1; $i++) {
+					$img['id_products'] = $this->input->post('id');
+					$img['name'] = $file['name'][$i];
+					$img['status'] = 1;
+					$this->Images_model->create($img);
+				}
+			}
+		}
+
 		$data = [];
 		$data['id_producer'] = $this->input->post('producer');
 		$data['name'] = $this->input->post('name');
