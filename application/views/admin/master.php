@@ -171,7 +171,7 @@
                 </li>
                 <li>
 
-                    <a href="<?php echo url_admin('bill') ?>">
+                    <a href="<?php echo url_admin('Bill') ?>">
                         <i class="material-icons">assignment</i>
                         <span>Quản lý đơn hàng</span>
                     </a>
