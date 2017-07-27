@@ -110,6 +110,8 @@ class Products extends MY_Controller {
 		$this->data['products']=$this->Products_model->get_info($id,'*');
 		$this->data['products_info']=$this->Products_info_model->get_info_rule(['id_products' => $id]);
 		$this->data['list_producer'] = $this->Producer_model->get_list($data);
+		$this->data['list_images'] = $this->Images_model->get_list_if( $id,['id_products' => $id]);
+		$this->data['count_images'] = $this->Images_model->get_list_total( $id,['id_products' => $id]);
 		$this->data['content']='admin/products/edit';
 		$this->load->view('admin/master',$this->data);
 	}

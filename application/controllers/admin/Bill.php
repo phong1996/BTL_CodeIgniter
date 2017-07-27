@@ -1,15 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-<<<<<<< HEAD
-class Bill extends My_Contronller {
-=======
 class Bill extends MY_Controller {
->>>>>>> origin/master
-
 
     public function index()
     {
+            echo 123;die;
         $data=array();
         $data['content']='admin/Bill/index';
         $this->load->view('admin/master',$data);

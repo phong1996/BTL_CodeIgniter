@@ -209,6 +209,32 @@ class MY_Model extends CI_Model {
         return $query->result();
     }
 
+    function get_list_if($input = array(), $where = array())
+    {
+        //xu ly ca du lieu dau vao
+        $this->get_list_set_input($input);
+
+        $this->db->where($where);
+
+        //thuc hien truy van du lieu
+        $query = $this->db->get($this->table);
+        //echo $this->db->last_query();
+        return $query->result();
+    }
+
+    function get_list_total($input = array(), $where = array())
+        {
+            //xu ly ca du lieu dau vao
+            $this->get_list_set_input($input);
+
+            $this->db->where($where);
+
+            //thuc hien truy van du lieu
+            $query = $this->db->get($this->table);
+            //echo $this->db->last_query();
+            return $query->num_rows();
+        }
+
     /**
      * Gan cac thuoc tinh trong input khi lay danh sach
      * $input : mang du lieu dau vao

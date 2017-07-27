@@ -126,7 +126,7 @@
                 <li>
                     <a href="<?php echo url_admin('home') ?>">
                         <i class="material-icons">home</i>
-                        <span>Thống kê</span>
+                        <span>Thống kê x</span>
                     </a>
                 </li>
                 <li>
@@ -163,6 +163,12 @@
                     <a href="<?php echo url_admin('products') ?>">
                         <i class="material-icons">assignment</i>
                         <span>Quản lý sản phẩm</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo url_admin('bill') ?>">
+                        <i class="material-icons">assignment</i>
+                        <span>Quản lý đơn hàng</span>
                     </a>
                 </li>
             </ul>
@@ -247,6 +253,8 @@
             }
         })
         CKEDITOR.replace( 'content' );
+
+
 </script>
  
 

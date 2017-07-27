@@ -63,6 +63,9 @@ var url_root = 'http://localhost/BTL_CodeIgniter/';
             }
         })
     });
+    $(".img").click(function(){
+        alert('123');
+    });
 
 
     jQuery.validator.addMethod("special_character", function (value, element) {
