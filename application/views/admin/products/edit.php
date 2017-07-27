@@ -69,11 +69,11 @@
                     <div class="row clearfix">
                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                             <div class="form-group" style="margin-left: 290px;">
-                                <div class="form-line">
+                                <div class="form">
                                    <?php
                                    for($i = 0; $i <= $count_images-1; $i++ ) {
                                        ?>
-                                        <img id="image" img_id="<?php echo $list_images[$i]->id ?>"  class="img" src="<?php echo base_url() . 'images/products/' . $list_images[$i]->name ?>" width="100" height="70px" style="border: 3px solid sandybrown; hover" >
+                                        <img id="image" img_id="<?php echo $list_images[$i]->id ?>"  class="img images" src="<?php echo base_url() . 'images/products/' . $list_images[$i]->name ?>" width="100" height="70px" style="border: 3px solid sandybrown; hover" >
                                        <?php
                                    }
                                    ?>

@@ -4,7 +4,7 @@
         <div class="card">
             <div class="header">
                 <h2>
-                    QUẢN LÝ NHÀ SẢN XUẤT
+                    QUẢN LÝ SẢN PHẨM
                 </h2>
                 <ul class="header-dropdown">
 
@@ -51,7 +51,17 @@
                                 <td class="sorting_1"><?=$value->name_pr?></td>
                                 <td class="sorting_1"><?=$value->price?></td>
                                 <td class="sorting_1"><?=$value->quantyti?></td>
-                                <td><img src="<?=base_url().'images/products/'.$value->avatar?>" width=100></td>
+                                <td><?php
+                                    if(!empty($value->avatar))
+                                    {
+                                       ?>
+                                        <img src="<?=base_url().'images/products/'.$value->avatar?>" width=100>
+                                        <?php
+                                    }else
+                                    {
+                                        echo "No Avatar";
+                                    }
+                                    ?></td>
                                 <td class="sorting_1"><?=$value->sale_off ?></td>
                                 <td class="sorting_1"><?=$value->views?></td>
                                 <td class="sorting_1"><?=$value->description?></td>

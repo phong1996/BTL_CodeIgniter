@@ -65,6 +65,7 @@ var url_root = 'http://localhost/BTL_CodeIgniter/';
     });
 
     $(".img").click(function(){
+        var img=$(this);
         $.ajax({
            type: "post",
             dataType: "json",
@@ -74,7 +75,7 @@ var url_root = 'http://localhost/BTL_CodeIgniter/';
                 $('.loading').show();
             },
             success: function () {
-                location.reload();
+               img.hide()
             }
         });
     });
@@ -252,7 +253,7 @@ var url_root = 'http://localhost/BTL_CodeIgniter/';
             }
         }
 });
-$("#frm_pr_ad").validate({
+$("#frm_pr_add").validate({
         rules: {
             producer: {
                 required: true

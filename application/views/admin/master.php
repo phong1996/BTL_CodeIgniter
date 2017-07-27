@@ -30,6 +30,7 @@
 
     <!-- Custom Css -->
     <link href="<?php echo public_url(); ?>/css/style.css" rel="stylesheet">
+    <link href="<?php echo public_url(); ?>/css/myStyle.css" rel="stylesheet">
 
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="<?php echo public_url(); ?>/css/themes/all-themes.css" rel="stylesheet" />
