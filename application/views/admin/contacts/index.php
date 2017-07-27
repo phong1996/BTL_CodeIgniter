@@ -40,7 +40,9 @@
                             <td><?=$li->email?></td>
                             <td><?=$li->content?></td>
                             <td><?=$li->phone?></td>
-                            <td><a href="<?php echo url_admin('contacts/delete'); ?>?id=<?php echo $li->id ?>"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                            <td><a href="<?php echo url_admin('contacts/delete'); ?>?id=<?php echo $li->id ?>">
+                                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                            </a>
                                 <a href="#">Trả Lời</a>
                             </td>
                         </tr>

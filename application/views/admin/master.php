@@ -165,6 +165,12 @@
                         <span>Quản lý sản phẩm</span>
                     </a>
                 </li>
+                <li>
+                    <a href="<?php echo url_admin('Bill') ?>">
+                        <i class="material-icons">picture_in_picture</i>
+                        <span>Quản lý đơn hàng</span>
+                    </a>
+                </li>
             </ul>
         </div>
         <!-- #Menu -->
