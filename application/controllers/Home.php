@@ -13,6 +13,8 @@ class Home extends MY_Controller {
 
 	public function index()
 	{
+		$input = array();
+
 		$this->data['content'] = 'front/layout/home';
 		$this->data['menu'] = 'front/layout/menu';
 		$this->data['slide'] = 'front/layout/slide';

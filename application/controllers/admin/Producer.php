@@ -38,7 +38,7 @@ class Producer extends MY_Controller {
          $this->load->library("upload", $config);
             if($this->upload->do_upload("logo"))
             {
-                $data['logo'] = 'images/logo/'.$config['file_name'];
+                $data['logo'] = $config['file_name'];
             }
             else{
                 pre('die');

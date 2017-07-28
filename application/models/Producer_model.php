@@ -5,7 +5,7 @@
 
 		public function list_menu()
 		{
-			return 	$this->get_list('*');
+			return $this->get_list('*');
 		}
 	}
  ?>
