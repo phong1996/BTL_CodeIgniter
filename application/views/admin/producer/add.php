@@ -49,12 +49,19 @@
                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
                             <label for="password_2">Logo</label>
                         </div>
-                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                            <div class="form-group">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-7">
+                           <div class="form-group">
                                 <div class="form-line">
-                                    <input type="file" accept="image/*" name="logo" class="form-control" placeholder="Enter your Logo">
-                                </div>
+                                    <label class="input-group-btn">
+                                      <span class="btn btn-primary">
+                                          Browse… <input id="file_edit" accept="image/*" name="logo" type="file" style="display: none;" multiple="">
+                                      </span>
+                                  </label>
+                              </div>
                             </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <img id="image" width=100>
                         </div>
                     </div>
                     <div class="row clearfix">

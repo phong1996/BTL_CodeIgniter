@@ -26,7 +26,7 @@
                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                             <div class="form-group">
                                 <div class="col-md-offset-2" style="margin-bottom: 10px">
-                                    <img id="image" src="<?php echo base_url().'images/slide/'.$slide->images; ?>" width=100>
+                                    <img id="image" src="<?php echo base_url().'images/slide/'.$slide->images; ?>" width=200>
                                 </div>
                             </div>
                         </div>
@@ -34,13 +34,18 @@
                     
                     <div class="row clearfix">
                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-
+                           <label for="file_edit">Chọn ảnh :</label>
                         </div>
                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="file" id="file_edit" accept="image/*" name="file_edit" class="form-control" placeholder="Enter your image">
-                                </div>
+
+                                    <label class="input-group-btn">
+                                      <span class="btn btn-primary">
+                                          Browse… <input id="file_edit" accept="image/*" name="file_edit" type="file" style="display: none;" multiple="">
+                                      </span>
+                                  </label>
+                              </div>
                             </div>
                         </div>
                     </div>

@@ -24,15 +24,22 @@
                     <input type="hidden" name="id" value="">
                     <div class="row clearfix">
                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                            <label for="password_2">Images</label>
+                            <label for="file_edit">Images</label>
                         </div>
-                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                            <div class="form-group">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-7">
+                           <div class="form-group">
                                 <div class="form-line">
-  <!--                                  <img id="image" src="<?php /*echo base_url().'images/slide/'.$_FILES['image']['name']; */?>" width=100>-->
-                                    <input type="file" accept="image/*" required name="image" id="image" class="form-control" placeholder="Enter your Logo">
-                                </div>
+
+                                    <label class="input-group-btn">
+                                      <span class="btn btn-primary">
+                                          Browse… <input id="file_edit" accept="image/*" name="file_edit" type="file" style="display: none;" multiple="">
+                                      </span>
+                                  </label>
+                              </div>
                             </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <img id="image" width=100>
                         </div>
                     </div>
                     <div class="row clearfix">

@@ -7,9 +7,7 @@
                     QUẢN LÝ NHÀ SẢN XUẤT
                 </h2>
                 <ul class="header-dropdown">
-
                     <a class="btn btn-primary" href="<?php echo url_admin('producer/add'); ?>">Thêm mới</a>
-
                 </ul>
             </div>
             <div class="body">

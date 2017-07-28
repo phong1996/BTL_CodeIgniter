@@ -186,6 +186,7 @@
     <!-- #END# Left Sidebar -->
     <!-- Right Sidebar -->
     <!-- #END# Right Sidebar -->
+     
 </section>
 
 <section class="content">
@@ -243,6 +244,7 @@
 <script src="<?php echo public_url(); ?>/js/pages/index.js"></script>
 
 <!-- Demo Js -->
+<script src="<?php echo public_url(); ?>/plugins/bootstrap-notify/bootstrap-notify.js"></script>
 <script src="<?php echo public_url(); ?>/js/demo.js"></script>
 <script src="<?php  echo public_url();?>/js/pages/forms/basic-form-elements.js"></script>
 <script src="<?php  echo public_url();?>/js/pages/jquery.validate.min.js"></script>
@@ -259,11 +261,26 @@
             }
         })
         CKEDITOR.replace( 'content' );
-
-
 </script>
- 
-
+<?php if($this->session->flashdata('flash_message')) { ?>
+<script type="text/javascript">
+   $.notify({
+    message: '<?php echo $this->session->flashdata('flash_message') ?>',
+},
+{
+    newest_on_top: true,
+    timer: 1000,
+    placement: {
+        from: 'bottom',
+        align: 'left'
+    },
+    animate: {
+        enter: 'animated fadeInDown',
+        exit: 'animated fadeOutUp'
+    },
+});
+</script>   
+<?php } ?>
 </body>
 
 </html>

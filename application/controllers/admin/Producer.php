@@ -59,6 +59,7 @@ class Producer extends MY_Controller {
         unlink($this->Producer_model->get_info($id,'logo')->logo);
         if($this->Producer_model->delete($id))
         {
+            $this->session->set_flashdata('flash_message', 'Xóa Thành Công');
             return redirect('admin/producer');
         }
         else

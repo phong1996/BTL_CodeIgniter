@@ -3,7 +3,7 @@
         <div class="card">
             <div class="header">
                 <h2>
-                    THÊM TÀI KHOẢN
+                    THÊM SẢN PHẨM
                 </h2>
                 <ul class="header-dropdown m-r--5">
 
@@ -66,19 +66,6 @@
                     </div>
                     <div class="row clearfix">
                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                            <label for="password_2">Avatar</label>
-                        </div>
-                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                            <div class="form-group">
-                                <div class="form-line">
-                                    <input type="file" accept="image/*" name="images[]" multiple id="images"  required class="form-control" placeholder="Enter your image">
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="row clearfix">
-                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
                             <label for="password_2">Sale_Off</label>
                         </div>
                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
@@ -100,8 +87,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div><!--
-//////////////////////////////////////////////////////////////////////////////////////////////-->
+                    </div>
                     <div class="row clearfix">
                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
                             <label for="password_2">Display</label>
@@ -205,7 +191,19 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row clearfix">
+                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                            <label for="password_2">Avatar</label>
+                        </div>
+                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <input type="file" accept="image/*" name="images[]" multiple id="images"  required class="form-control" placeholder="Enter your image">
+                                </div>
+                            </div>
 
+                        </div>
+                    </div>
                     </div>
 
 
