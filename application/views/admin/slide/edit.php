@@ -57,6 +57,18 @@
                             </div>
                         </div>
                     </div>
+                      <div class="row clearfix">
+                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <input type="text" required value="<?php echo $slide->name ?>" name="name" id="name" class="form-control" placeholder="Tên slide...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row clearfix">
                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
                             <label for="password_2">status</label>

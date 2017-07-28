@@ -27,7 +27,7 @@
                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="text" id="username" name="username" class="form-control" placeholder="John...">
+                                    <input type="text" autocomplete="off" id="username" name="username" class="form-control" placeholder="John...">
                                 </div>
                                 <div class="clear error"></div>
                             </div>
@@ -40,7 +40,7 @@
                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="password" id="password" name="password" class="form-control" placeholder="******">
+                                    <input type="password" autocomplete="off" id="password" name="password" class="form-control" placeholder="******">
                                 </div>
                             </div>
                         </div>

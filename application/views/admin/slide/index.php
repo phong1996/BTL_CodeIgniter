@@ -15,29 +15,20 @@
             <div class="body">
                 <div class="table-responsive">
                     <table class="table table-bordered table-striped table-hover dataTable js-exportable">
-                        <thead>
+                        <thead> 
                         <tr role="row">
-                            <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 142px;">ID</th>
+                            <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 142px;">Name</th>
                             <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 235px;">Image</th>
                             <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 79px;">Link</th>
                             <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 79px;">Status</th>
                             <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 79px;">action</th>
                         </tr>
                         </thead>
-                        <tfoot>
-                        <tr>
-                            <th rowspan="1" colspan="1">ID</th>
-                            <th rowspan="1" colspan="1">Name</th>
-                            <th rowspan="1" colspan="1">logo</th>
-                            <th rowspan="1" colspan="1">status</th>
-                            <th rowspan="1" colspan="1">action</th>
-                        </tr>
-                        </tfoot>
                         <tbody>
                         <?php foreach ($list_slide as $key => $value) {
                             ?>
                             <tr role="row" class="odd">
-                                <td class="sorting_1"><?=$value->id?></td>
+                                <td class="sorting_1"><?=$value->name?></td>
                                 <td><img src="<?=base_url().'images/slide/'.$value->images?>" width=100></td>
                                 <td><?=$value->link?></td>
                                 <td>

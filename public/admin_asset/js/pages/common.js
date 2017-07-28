@@ -98,6 +98,35 @@ var url_root = 'http://localhost/BTL_CodeIgniter/';
 
     $("#frm-regis").validate({
         rules: {
+                 username: {
+                    required: true,
+                    minlength: 6,
+                    maxlength: 50,
+                    remote: {
+                        url: url_root +"admin/Users/checkuser",
+                        type: "post",
+                        data: {
+                            username: function () {
+                                return $("#username").val();
+                            },
+                            id:$('#id').val(),
+                        }
+                    }
+                },
+                  email: {
+                    required: true,
+                    email: true,
+                    remote: {
+                        url: url_root +"admin/Users/checkemail",
+                        type: "post",
+                        data: {
+                            email: function () {
+                                return $("#email").val();
+                            },
+                            id:$('#id').val(),
+                        }
+                    }
+                },
                 password: {
                     required: true,
                     minlength: 6,
@@ -122,7 +151,18 @@ var url_root = 'http://localhost/BTL_CodeIgniter/';
                 }
             },
             messages: {
-                
+                 username: {
+                    required: 'Vui lòng nhập mật khẩu!',
+                    minlength: 'Tối thiểu 6 ký tự!',
+                    maxlength: 'Tối đa 50 ký tự!',
+                    remote:'username đã tồn tại'
+                },
+                email: {
+                    required: 'Vui lòng nhập mật khẩu!',
+                    minlength: 'Tối thiểu 6 ký tự!',
+                    maxlength: 'Tối đa 50 ký tự!',
+                    remote:'email đã tồn tại'
+                },
                 password: {
                     required: 'Vui lòng nhập mật khẩu!',
                     minlength: 'Tối thiểu 6 ký tự!',
@@ -154,7 +194,7 @@ var url_root = 'http://localhost/BTL_CodeIgniter/';
         link: {
             required: true,
             minlength: 6,
-            maxlength: 50
+            maxlength: 500
         }
     },
     messages: {
@@ -164,7 +204,7 @@ var url_root = 'http://localhost/BTL_CodeIgniter/';
         link: {
             required: 'Vui lòng nhập link!',
             minlength: 'Tối thiểu 6 ký tự!',
-            maxlength: 'Tối đa 50 ký tự!'
+            maxlength: 'Tối đa 500 ký tự!'
         }
     }
 });
@@ -173,14 +213,14 @@ var url_root = 'http://localhost/BTL_CodeIgniter/';
         link: {
             required: true,
             minlength: 6,
-            maxlength: 50
+            maxlength: 500
         }
     },
     messages: {
         link: {
             required: 'Vui lòng nhập link!',
             minlength: 'Tối thiểu 6 ký tự!',
-            maxlength: 'Tối đa 50 ký tự!'
+            maxlength: 'Tối đa 500 ký tự!'
         }
     }
 });
