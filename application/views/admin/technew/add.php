@@ -39,7 +39,7 @@
                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="password" id="intro" name="intro" class="form-control" placeholder="Enter your Intro">
+                                    <input type="text" id="intro" name="intro" class="form-control" placeholder="Enter your Intro">
                                 </div>
                             </div>
                         </div>

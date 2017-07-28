@@ -147,6 +147,7 @@ CREATE TABLE `rates` (
 
 CREATE TABLE `slides` (
   `id` int(11) NOT NULL,
+  'name' varchar(500) NOT NULL,
   `images` varchar(500) NOT NULL,
   `link` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

@@ -41,6 +41,7 @@ Class Slide extends MY_Controller{
         }
 
         $data['link'] = $this->input->post('link');
+        $data['name'] = $this->input->post('name');
         if($this->input->post('status') == 'on')
         {
             $data['status'] = 1;
@@ -79,6 +80,7 @@ Class Slide extends MY_Controller{
     {
             $data=[];
             $data['link'] = $this->input->post('link');
+            $data['name'] = $this->input->post('name');
             if($this->input->post('status') == 'on'){
                 $data['status'] = 1;
             }else{

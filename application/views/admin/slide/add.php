@@ -49,6 +49,18 @@
                     </div>
                     <div class="row clearfix">
                         <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                            <label for="email_address_2">name</label>
+                        </div>
+                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <input type="text" name="name" id="name" class="form-control" placeholder="name slides">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix">
+                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
                             <label for="password_2">Status</label>
                         </div>
                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7" style="margin-top: 7px;">

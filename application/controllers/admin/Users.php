@@ -106,10 +106,13 @@ class Users extends MY_Controller {
 
     function checkuser()
     {
-        if(($this->User_model->get_info($this->input->post('id'),'username')->username)==$this->input->post('username'))
+        if($this->input->post('id'))
         {
-            echo "true";
-            return;
+            if(($this->User_model->get_info($this->input->post('id'),'username')->username)==$this->input->post('username'))
+            {
+                echo "true";
+                return;
+            }
         }
         $result = $this->User_model->get_total(['username' => $this->input->post('username')]);
         if($result)
@@ -122,18 +125,21 @@ class Users extends MY_Controller {
 
     function checkemail()
     {
+      if($this->input->post('id'))
+      {
         if(($this->User_model->get_info($this->input->post('id'),'email')->email)==$this->input->post('email'))
         {
             echo "true";
             return;
         }
-        $result = $this->User_model->get_total(['email' => $this->input->post('email')]);
-        if($result)
-        {
-            echo "false";
-        }else{
-            echo "true";
-        }
     }
+    $result = $this->User_model->get_total(['email' => $this->input->post('email')]);
+    if($result)
+    {
+        echo "false";
+    }else{
+        echo "true";
+    }
+}
 
 }
