@@ -4,6 +4,11 @@ function public_url($url = '')
     return base_url('public/admin_asset'.$url);
 }
 
+function public_front_url($url = '')
+{
+    return base_url('public/front_asset'.$url);
+}
+
 function pre($list, $exit = true)
 {
     echo '<pre>';

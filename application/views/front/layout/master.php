@@ -17,15 +17,15 @@
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo public_front_url()?>/css/bootstrap.min.css">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php echo public_front_url()?>/css/font-awesome.min.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="<?php echo public_front_url()?>/css/owl.carousel.css">
+    <link rel="stylesheet" href="<?php echo public_front_url()?>/style.css">
+    <link rel="stylesheet" href="<?php echo public_front_url()?>/css/responsive.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -78,12 +78,14 @@
     </div>
 </div> <!-- End header area -->
 
+
+
 <div class="site-branding-area">
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
                 <div class="logo">
-                    <h1><a href="./"><img src="img/logo.png"></a></h1>
+                    <h1><a href="./"><img src="<?php echo public_front_url()?>/img/logo.png"></a></h1>
                 </div>
             </div>
 
@@ -96,82 +98,76 @@
     </div>
 </div> <!-- End site branding area -->
 
-<div class="mainmenu-area">
-    <div class="container">
-        <div class="row">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="index.html">Home</a></li>
-                    <li><a href="shop.html">Shop page</a></li>
-                    <li><a href="single-product.html">Single product</a></li>
-                    <li><a href="cart.html">Cart</a></li>
-                    <li><a href="checkout.html">Checkout</a></li>
-                    <li><a href="#">Category</a></li>
-                    <li><a href="#">Others</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div> <!-- End mainmenu area -->
+<section class="content">
+    <?php $this->load->view('front/layout/menu'); ?>
+</section>
 
-<div class="slider-area">
-    <!-- Slider -->
-    <div class="block-slider block-slider4">
-        <ul class="" id="bxslider-home4">
-            <li>
-                <img src="img/h4-slide.png" alt="Slide">
-                <div class="caption-group">
-                    <h2 class="caption title">
-                        iPhone <span class="primary">6 <strong>Plus</strong></span>
-                    </h2>
-                    <h4 class="caption subtitle">Dual SIM</h4>
-                    <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
-                </div>
-            </li>
-            <li><img src="img/h4-slide2.png" alt="Slide">
-                <div class="caption-group">
-                    <h2 class="caption title">
-                        by one, get one <span class="primary">50% <strong>off</strong></span>
-                    </h2>
-                    <h4 class="caption subtitle">school supplies & backpacks.*</h4>
-                    <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
-                </div>
-            </li>
-            <li><img src="img/h4-slide3.png" alt="Slide">
-                <div class="caption-group">
-                    <h2 class="caption title">
-                        Apple <span class="primary">Store <strong>Ipod</strong></span>
-                    </h2>
-                    <h4 class="caption subtitle">Select Item</h4>
-                    <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
-                </div>
-            </li>
-            <li><img src="img/h4-slide4.png" alt="Slide">
-                <div class="caption-group">
-                    <h2 class="caption title">
-                        Apple <span class="primary">Store <strong>Ipod</strong></span>
-                    </h2>
-                    <h4 class="caption subtitle">& Phone</h4>
-                    <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
-                </div>
-            </li>
-        </ul>
-    </div>
-    <!-- ./Slider -->
-</div> <!-- End slider area -->
+<section class="content">
+    <?php $this->load->view('front/layout/slide'); ?>
+</section>
 
 <section class="content">
     <?php $this->load->view($content) ?>
 </section>
+
+<div class="footer-top-area">
+    <div class="zigzag-bottom"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="footer-about-us">
+                    <h2>u<span>Stora</span></h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt id doloribus vero quam laborum quas alias dolores blanditiis iusto consequatur, modi aliquid eveniet eligendi iure eaque ipsam iste, pariatur omnis sint! Suscipit, debitis, quisquam. Laborum commodi veritatis magni at?</p>
+                    <div class="footer-social">
+                        <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-youtube"></i></a>
+                        <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="footer-menu">
+                    <h2 class="footer-wid-title">User Navigation </h2>
+                    <ul>
+                        <li><a href="#">My account</a></li>
+                        <li><a href="#">Order history</a></li>
+                        <li><a href="#">Wishlist</a></li>
+                        <li><a href="#">Vendor contact</a></li>
+                        <li><a href="#">Front page</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="footer-menu">
+                    <h2 class="footer-wid-title">Categories</h2>
+                    <ul>
+                        <li><a href="#">Mobile Phone</a></li>
+                        <li><a href="#">Home accesseries</a></li>
+                        <li><a href="#">LED TV</a></li>
+                        <li><a href="#">Computer</a></li>
+                        <li><a href="#">Gadets</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="footer-newsletter">
+                    <h2 class="footer-wid-title">Newsletter</h2>
+                    <p>Sign up to our newsletter and get exclusive deals you wont find anywhere else straight to your inbox!</p>
+                    <div class="newsletter-form">
+                        <form action="#">
+                            <input type="email" placeholder="Type your email">
+                            <input type="submit" value="Subscribe">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- End footer top area -->
 
 <div class="footer-bottom-area">
     <div class="container">
@@ -201,17 +197,17 @@
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
 <!-- jQuery sticky menu -->
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/jquery.sticky.js"></script>
+<script src="<?php echo public_front_url()?>/js/owl.carousel.min.js"></script>
+<script src="<?php echo public_front_url()?>/js/jquery.sticky.js"></script>
 
 <!-- jQuery easing -->
-<script src="js/jquery.easing.1.3.min.js"></script>
+<script src="<?php echo public_front_url()?>/js/jquery.easing.1.3.min.js"></script>
 
 <!-- Main Script -->
-<script src="js/main.js"></script>
+<script src="<?php echo public_front_url()?>/js/main.js"></script>
 
 <!-- Slider -->
-<script type="text/javascript" src="js/bxslider.min.js"></script>
-<script type="text/javascript" src="js/script.slider.js"></script>
+<script type="text/javascript" src="<?php echo public_front_url()?>/js/bxslider.min.js"></script>
+<script type="text/javascript" src="<?php echo public_front_url()?>/js/script.slider.js"></script>
 </body>
 </html>
