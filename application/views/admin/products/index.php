@@ -64,7 +64,7 @@
                                     {
                                         ?>
                                          <p style="text-align: center">No Avatar</p>
-                                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Chọn Avatar</button>
+                                        <button  avatar_id="<?php echo $value->id ?>" class="btn btn-info btn-lg avatar" data-toggle="modal" data-target="#myModal">Chọn Avatar</button>
                                         <?php
                                     }
                                     ?></td>

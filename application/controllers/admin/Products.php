@@ -23,6 +23,13 @@ class Products extends MY_Controller {
 		$data['content']='admin/products/index';
 		$this->load->view('admin/master',$data);
 	}
+
+	public function selectImage()
+	{
+		$avatar = $this->Images_model->get_list_if('*', ['id_products' => $this->input->post('avatar_id')]);
+		pre($avatar);
+	}
+
 	public function add()
 	{
 		$data=array();

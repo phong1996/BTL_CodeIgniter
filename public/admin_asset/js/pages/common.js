@@ -84,10 +84,15 @@ var url_root = 'http://localhost/BTL_CodeIgniter/';
        $("#divpopup").dial;
     });
 
-$("#opener").click(function() {
-    $("#dialog1").dialog('open');
-});
-
+    $(".avatar").click(function(){
+        var avatar_id = $(this).attr('avatar_id');
+        $.ajax({
+           type: "post",
+            datatype: "json",
+            url: url_root + "admin/Products/selectImage",
+            data:{avatar_id : avatar_id}
+        });
+    });
 
 
 jQuery.validator.addMethod("special_character", function (value, element) {
