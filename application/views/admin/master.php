@@ -7,6 +7,14 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <title>Welcome To | Bootstrap Based Admin Template - Material Design</title>
     <!-- Favicon-->
+
+
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" />
+
     <link rel="icon" href="<?php echo public_url(); ?>/favicon.ico" type="image/x-icon">
 
     <!-- Google Fonts -->
@@ -35,8 +43,12 @@
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="<?php echo public_url(); ?>/css/themes/all-themes.css" rel="stylesheet" />
     <link href="<?php echo public_url(); ?>/icon/css/font-awesome.min.css" rel="stylesheet" />
+    <!--<link href="<?php /*echo public_url(); */?>/jqueryui/jquery-ui.css" rel="stylesheet" />
+    <script src="<?php /*echo public_url(); */?>/jqueryui/jquery-3.2.1.min.js"></script>
+    <script src="<?php /*echo public_url(); */?>/jqueryui/jquery-ui.js"></script>-->
 
-<!--    <link rel="shortcut icon" href="../favicon.ico">-->
+
+    <!--    <link rel="shortcut icon" href="../favicon.ico">-->
 
 
 

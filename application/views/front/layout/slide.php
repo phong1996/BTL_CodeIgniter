@@ -1,45 +1,29 @@
-<div class="slider-area">
+<div class="slider-area" style="font-family: 'Open Sans Condensed', sans-serif">
     <!-- Slider -->
     <div class="block-slider block-slider4">
         <ul class="" id="bxslider-home4">
-            <li>
-                <img src="<?php echo public_front_url()?>/img/h4-slide.png" alt="Slide">
-                <div class="caption-group">
-                    <h2 class="caption title">
-                        iPhone <span class="primary">6 <strong>Plus</strong></span>
-                    </h2>
-                    <h4 class="caption subtitle">Dual SIM</h4>
-                    <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
-                </div>
-            </li>
-            <li><img src="<?php echo public_front_url()?>/img/h4-slide2.png" alt="Slide">
-                <div class="caption-group">
-                    <h2 class="caption title">
-                        by one, get one <span class="primary">50% <strong>off</strong></span>
-                    </h2>
-                    <h4 class="caption subtitle">school supplies & backpacks.*</h4>
-                    <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
-                </div>
-            </li>
-            <li><img src="<?php echo public_front_url()?>/img/h4-slide3.png" alt="Slide">
-                <div class="caption-group">
-                    <h2 class="caption title">
-                        Apple <span class="primary">Store <strong>Ipod</strong></span>
-                    </h2>
-                    <h4 class="caption subtitle">Select Item</h4>
-                    <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
-                </div>
-            </li>
-            <li><img src="<?php echo public_front_url()?>/img/h4-slide4.png" alt="Slide">
-                <div class="caption-group">
-                    <h2 class="caption title">
-                        Apple <span class="primary">Store <strong>Ipod</strong></span>
-                    </h2>
-                    <h4 class="caption subtitle">& Phone</h4>
-                    <a class="caption button-radius" href="#"><span class="icon"></span>Shop now</a>
-                </div>
-            </li>
+            <?php
+            if(isset($list_slide))
+            {
+                foreach($list_slide as $key => $value)
+                {
+                    ?>
+                    <li>
+                        <img src="<?php echo base_url().'images/slide/'.$value->images?>" alt="Slide">
+                        <div class="caption-group">
+                            <h2 class="caption title" style="color: red">
+                                <b>Ưu đãi cực lớn</b>    <i class="fa fa-plus-square" aria-hidden="true"></i>
+                            </h2>
+                            <h3 class="caption subtitle" style="color:#CFB408;"><?php echo $value->name?></h3>
+                            <a class="caption button-radius" href="#"><span class="icon"></span>Mua Ngay</a>
+                        </div>
+                    </li>
+                    <?php
+                }
+            }
+            ?>
         </ul>
     </div>
     <!-- ./Slider -->
 </div> <!-- End slider area -->
+

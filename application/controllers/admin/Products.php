@@ -14,7 +14,12 @@ class Products extends MY_Controller {
 	public function index()
 	{
 		$data=array();
-		$data['list_products'] = $this->Products_model->join();;
+		$count = $this->Products_model->get_total();
+		$data['list_products'] = $this->Products_model->join();
+		for($i = 0; $i <= $count-1; $i++)
+		{
+			$data['img'][$data['list_products'][$i]->id] = $this->Images_model->get_info_rule( ['id_products' => $data['list_products'][$i]->id]);
+		}
 		$data['content']='admin/products/index';
 		$this->load->view('admin/master',$data);
 	}
@@ -38,8 +43,12 @@ class Products extends MY_Controller {
 		$config['max_height']  = '4000';
 		$file  = $_FILES['images'];
 		$count = count($file['name']);//lấy tổng số file được upload
+		$avatar='';
+		$image=[];
 		for($i=0; $i<=$count-1; $i++) {
-			$_FILES['userfile']['name']     = $file['name'][$i];  //khai báo tên của file thứ i
+			$avatar=random_string('alnum', 16).str_replace([" "],'',$file['name'][$i]);
+			$_FILES['userfile']['name']     = $avatar;  //khai báo tên của file thứ i
+			$image[]=$avatar;
 			$_FILES['userfile']['type']     = $file['type'][$i]; //khai báo kiểu của file thứ i
 			$_FILES['userfile']['tmp_name'] = $file['tmp_name'][$i]; //khai báo đường dẫn tạm của file thứ i
 			$_FILES['userfile']['error']    = $file['error'][$i]; //khai báo lỗi của file thứ i
@@ -55,7 +64,7 @@ class Products extends MY_Controller {
 		$data['name'] = $this->input->post('name');
 		$data['price'] = $this->input->post('price');
 		$data['quantyti'] = $this->input->post('quantyti');
-		$data['avatar'] = $file['name'][0];
+		$data['avatar'] = $avatar;
 		$data['sale_off'] = $this->input->post('sale_off');
 		$data['views'] = 0;
 		$data['description'] = $this->input->post('description');
@@ -64,10 +73,10 @@ class Products extends MY_Controller {
 		{
 			$last_id = $this->db->insert_id();
 			/*insert list image of Products*/
-			for($i = 0; $i <= $count - 1; $i++)
+			foreach($image as $value)
 			{
 				$img['id_products'] = $last_id;
-				$img['name'] = $file['name'][$i];
+				$img['name'] =  $value;
 				$img['status'] = 1;
 				$this->Images_model->create($img);
 			}
@@ -130,6 +139,7 @@ class Products extends MY_Controller {
 
 	public function postEdit()
 	{
+		$avatar='';
 		if(!empty($_FILES['images']['name'][0])) {
 
 			$config = array();
@@ -139,9 +149,13 @@ class Products extends MY_Controller {
 			$config['max_width'] = '4000';
 			$config['max_height'] = '4000';
 			$file = $_FILES['images'];
+
+			$image=[];
 			$count = count($file['name']);//lấy tổng số file được upload
 			for ($i = 0; $i <= $count - 1; $i++) {
-				$_FILES['userfile']['name'] = $file['name'][$i];  //khai báo tên của file thứ i
+				$avatar=random_string('alnum', 16).str_replace([" "],'',$file['name'][$i]);
+				$_FILES['userfile']['name']     = $avatar;  //khai báo tên của file thứ i
+				$image[]=$avatar;
 				$_FILES['userfile']['type'] = $file['type'][$i]; //khai báo kiểu của file thứ i
 				$_FILES['userfile']['tmp_name'] = $file['tmp_name'][$i]; //khai báo đường dẫn tạm của file thứ i
 				$_FILES['userfile']['error'] = $file['error'][$i]; //khai báo lỗi của file thứ i
@@ -153,9 +167,10 @@ class Products extends MY_Controller {
 			}
 
 			if ($count != 0) {
-				for ($i = 0; $i <= $count - 1; $i++) {
+				foreach($image as $value)
+				{
 					$img['id_products'] = $this->input->post('id');
-					$img['name'] = $file['name'][$i];
+					$img['name'] =  $value;
 					$img['status'] = 1;
 					$this->Images_model->create($img);
 				}
@@ -169,6 +184,7 @@ class Products extends MY_Controller {
 		$data['quantyti'] = $this->input->post('quantyti');
 		$data['sale_off'] = $this->input->post('sale_off');
 		$data['description'] = $this->input->post('description');
+		$data['avatar'] = $avatar;
 		$info = [];
 		$info['display'] = $this->input->post('display');
 		$info['camera'] = $this->input->post('camera');
@@ -178,6 +194,7 @@ class Products extends MY_Controller {
 		$info['design'] = $this->input->post('design');
 		$info['battery_charge'] = $this->input->post('battery');
 		$info['utilities'] = $this->input->post('utilities');
+
 
 		if($this->Products_model->update($this->input->post('id'),$data))
 		{

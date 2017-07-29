@@ -18,4 +18,10 @@ Class Products_model extends MY_Model
        $query = $this->db->query('select * from `images` WHERE id_products = "'.$id.'"');
         return $query;
     }
+
+    public function get_image_limit()
+    {
+        $query = $this->db->query('select * from `products` ORDER BY id DESC LIMIT 5');
+        return $query->row();
+    }
 }

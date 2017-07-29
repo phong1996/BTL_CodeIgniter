@@ -80,8 +80,17 @@ var url_root = 'http://localhost/BTL_CodeIgniter/';
         });
     });
 
+    $("#popup").click(function(){
+       $("#divpopup").dial;
+    });
 
-    jQuery.validator.addMethod("special_character", function (value, element) {
+$("#opener").click(function() {
+    $("#dialog1").dialog('open');
+});
+
+
+
+jQuery.validator.addMethod("special_character", function (value, element) {
         return /[a-zA-Z0-9]+$/.test(value);
     });
 
