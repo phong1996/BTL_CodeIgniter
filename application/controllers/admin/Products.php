@@ -18,7 +18,7 @@ class Products extends MY_Controller {
 		$data['list_products'] = $this->Products_model->join();
 		for($i = 0; $i <= $count-1; $i++)
 		{
-			$data['img'][$data['list_products'][$i]->id] = $this->Images_model->get_info_rule( ['id_products' => $data['list_products'][$i]->id]);
+			$data['img'][] = $this->Images_model->get_info_rule( ['id_products' => $data['list_products'][$i]->id]);
 		}
 		$data['content']='admin/products/index';
 		$this->load->view('admin/master',$data);
@@ -26,8 +26,7 @@ class Products extends MY_Controller {
 
 	public function selectImage()
 	{
-		$avatar = $this->Images_model->get_list_if('*', ['id_products' => $this->input->post('avatar_id')]);
-		pre($avatar);
+		$avatar['img'] = $this->Images_model->get_list_if('*', ['id_products' => $this->input->post('avatar_id')]); 
 	}
 
 	public function add()
