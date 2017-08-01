@@ -58,16 +58,20 @@
                                     if(!empty($value->avatar))
                                     {
                                        ?>
-                                        <img src="<?=base_url().'images/products/'.$value->avatar?>" width=100>
+                                            <div class="avt_<?=$value->id?>">
+                                                <img src="<?=base_url().'images/products/'.$value->avatar?>" width=100>
+                                            </div>
                                         <?php
                                     }else
                                     {
                                         ?>
-                                         <p style="text-align: center">No Avatar</p>
-                                        <button  avatar_id="<?php echo $value->id ?>" class="btn btn-info btn-lg avatar" data-toggle="modal" data-target="#myModal">Chọn Avatar</button>
+                                         <p style="text-align: center" class="avt_<?=$value->id?>">No Avatar</p>
+
                                         <?php
                                     }
-                                    ?></td>
+                                    ?>
+                                    <button  avatar_id="<?php echo $value->id ?>" class="btn btn-info btn-lg avatar" data-toggle="modal" data-target="#myModal">Chọn Avatar</button>
+                                </td>
                                 <td class="sorting_1"><?=$value->sale_off ?></td>
                                 <td class="sorting_1"><?=$value->views?></td>
                                 <td class="sorting_1"><?=$value->description?></td>
@@ -95,18 +99,8 @@
                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                                     <h4 class="modal-title">Hãy chọn avatar cho sản phẩm</h4>
                                 </div>
-                                <div class="modal-body">
-                                    <?php
-                                    print_r($img);
-                                        foreach($img as $key => $value)
-                                        {
-                                            echo $key;
+                                <div class="modal-body" id="avatar">
 
-                                            ?>
-                                            <img src="<?=base_url()?>images/products/<?php echo $value->name?>" alt="">
-                                            <?php
-                                        }
-                                        ?>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>

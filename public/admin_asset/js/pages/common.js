@@ -90,10 +90,31 @@ var url_root = 'http://localhost/BTL_CodeIgniter/';
            type: "post",
             datatype: "json",
             url: url_root + "admin/Products/selectImage",
-            data:{avatar_id : avatar_id}
+            data:{avatar_id : avatar_id},
+            success:function(data){
+                $('#avatar').html(data);
+            }
         });
     });
+    $('body').on('click','#list_image',function(){
+        image_name=$(this).attr('link');
+        link=$(this).attr('src');
+        pr_id=$(this).attr('id_pr');
+        $.ajax({
+            type: "post",
+            dataType: "json",
+            url: url_root + "admin/Products/choiceAvatar",
+            data:{image_name: image_name,pr_id:pr_id},
+            beforeSend: function () {
+                $('.loading').show();
+            },
+            success: function (data) {
+               $(".avt_"+pr_id).html("<img src='"+link+"' width=100>");
+                $("#myModal").modal('hide');
 
+            }
+        });
+    });
 
 jQuery.validator.addMethod("special_character", function (value, element) {
         return /[a-zA-Z0-9]+$/.test(value);

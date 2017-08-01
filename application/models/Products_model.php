@@ -24,4 +24,13 @@ Class Products_model extends MY_Model
         $query = $this->db->query('select * from `products` ORDER BY id DESC LIMIT 5');
         return $query->row();
     }
+
+    public function get_info_product()
+    {
+        $this->db->select('*');
+        $this->db->from('products');
+        $this->db->join('', 'table1.id = table2.id');
+        $this->db->join('table3', 'table1.id = table3.id');
+        $query = $this->db->get();
+    }
 }

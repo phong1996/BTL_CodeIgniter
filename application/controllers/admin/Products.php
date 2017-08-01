@@ -16,6 +16,7 @@ class Products extends MY_Controller {
 		$data=array();
 		$count = $this->Products_model->get_total();
 		$data['list_products'] = $this->Products_model->join();
+		/*pre($data);*/
 		for($i = 0; $i <= $count-1; $i++)
 		{
 			$data['img'][$data['list_products'][$i]->id] = $this->Images_model->get_info_rule( ['id_products' => $data['list_products'][$i]->id]);
@@ -26,8 +27,13 @@ class Products extends MY_Controller {
 
 	public function selectImage()
 	{
-		$avatar = $this->Images_model->get_list_if('*', ['id_products' => $this->input->post('avatar_id')]);
-		pre($avatar);
+		$avatar_aj = $this->Images_model->get_list_if('*', ['id_products' => $this->input->post('avatar_id')]);
+		$this->load->view('admin/products/ajax/ajaxAvatar',['avatar'=>$avatar_aj,'pr_id'=>$this->input->post('avatar_id')]);
+	}
+	public function choiceAvatar()
+	{
+		$this->Products_model->update($this->input->post('pr_id'),['avatar'=>$this->input->post('image_name')]);
+		echo 'true';
 	}
 
 	public function add()
