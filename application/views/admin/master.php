@@ -39,7 +39,7 @@
     <!-- Custom Css -->
     <link href="<?php echo public_url(); ?>/css/style.css" rel="stylesheet">
     <link href="<?php echo public_url(); ?>/css/myStyle.css" rel="stylesheet">
-
+    <link href="<?php echo public_url(); ?>/plugins/dropzone/dropzone.css" rel="stylesheet">
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="<?php echo public_url(); ?>/css/themes/all-themes.css" rel="stylesheet" />
     <link href="<?php echo public_url(); ?>/icon/css/font-awesome.min.css" rel="stylesheet" />
@@ -208,7 +208,6 @@
 <!-- Jquery Core Js -->
 <!-- Jquery Core Js -->
 <script src="<?php echo public_url(); ?>/plugins/jquery/jquery.min.js"></script>
-
 <!-- Bootstrap Core Js -->
 <script src="<?php echo public_url(); ?>/plugins/bootstrap/js/bootstrap.js"></script>
 
@@ -256,14 +255,16 @@
 <script src="<?php echo public_url(); ?>/js/pages/index.js"></script>
 
 <!-- Demo Js -->
-<script src="<?php echo public_url(); ?>/plugins/bootstrap-notify/bootstrap-notify.js"></script>
-<script src="<?php echo public_url(); ?>/js/demo.js"></script>
+<script src="<?php  echo public_url(); ?>/plugins/bootstrap-notify/bootstrap-notify.js"></script>
+<script src="<?php  echo public_url(); ?>/js/demo.js"></script>
 <script src="<?php  echo public_url();?>/js/pages/forms/basic-form-elements.js"></script>
 <script src="<?php  echo public_url();?>/js/pages/jquery.validate.min.js"></script>
 <script src="<?php  echo public_url();?>/js/pages/common.js"></script>
 <script src="<?php  echo public_url();?>/js/pages/validate_producer.js"></script>
 <script src="<?php  echo public_url();?>/js/pages/validate_edit_producer.js"></script>
 <script src="//cdn.ckeditor.com/4.7.1/full/ckeditor.js"></script>
+<script src="<?php  echo public_url();?>/plugins/dropzone/dropzone.js"></script>
+
 <script type="text/javascript">
         var url=window.location.href;
         $('.menu ul li').each(function () {
