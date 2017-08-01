@@ -17,7 +17,7 @@ Class MY_Controller extends CI_Controller
             {
                 if(strtolower($this->uri->segment(2)=='login'))
                 {
-                   
+                  
                 }
                 elseif($this->session->userdata("user_login"))
                 {

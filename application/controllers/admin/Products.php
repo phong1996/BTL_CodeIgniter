@@ -105,7 +105,10 @@ class Products extends MY_Controller {
 			redirect('admin/products');
 		}
 	}
-
+	public function ajaxPostImage()
+	{
+		return true;
+	}
 	public function delete($id)
 	{
 		$count = $this->Images_model->get_total(['id_products' => $id]);

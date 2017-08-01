@@ -24,4 +24,5 @@ Class Products_model extends MY_Model
         $query = $this->db->query('select * from `products` ORDER BY id DESC LIMIT 5');
         return $query->row();
     }
+    
 }
