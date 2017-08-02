@@ -264,7 +264,8 @@
         addRemoveLinks: true,
         removedfile:function (file) {
             file.previewElement.parentNode.removeChild(file.previewElement);
-        }
+        },
+        
     };
     $('#submitform').click(function () {
         $('#frm_pr_add').submit();
