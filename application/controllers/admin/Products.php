@@ -44,11 +44,10 @@ class Products extends MY_Controller {
 		$this->load->view('admin/master',$data);
 	}
 
+	
 	public function addPost()
 	{
 		/*upload images*/
-		$list_image=$this->session->userdata('list_image');
-		pre($list_image);
 		$img = array();
 		$config = array();
 		$config['upload_path']   = './images/products';
@@ -56,11 +55,29 @@ class Products extends MY_Controller {
 		$config['max_size'] = '10240';
 		$config['max_width']  = '4000';
 		$config['max_height']  = '4000';
+		$file  = $_FILES['images'];
+		$count = count($file['name']);//lấy tổng số file được upload
+		$avatar='';
+		$image=[];
+		for($i=0; $i<=$count-1; $i++) {
+			$avatar=random_string('alnum', 16).str_replace([" "],'',$file['name'][$i]);
+			$_FILES['userfile']['name']     = $avatar;  //khai báo tên của file thứ i
+			$image[]=$avatar;
+			$_FILES['userfile']['type']     = $file['type'][$i]; //khai báo kiểu của file thứ i
+			$_FILES['userfile']['tmp_name'] = $file['tmp_name'][$i]; //khai báo đường dẫn tạm của file thứ i
+			$_FILES['userfile']['error']    = $file['error'][$i]; //khai báo lỗi của file thứ i
+			$_FILES['userfile']['size']     = $file['size'][$i]; //khai báo kích cỡ của file thứ i
+			$this->load->library('upload', $config);
+			if($this->upload->do_upload())
+			{
+			}
+		}
+		/*insert products*/
 		$data['id_producer'] = $this->input->post('producer');
 		$data['name'] = $this->input->post('name');
 		$data['price'] = $this->input->post('price');
 		$data['quantyti'] = $this->input->post('quantyti');
-		$data['avatar'] = $list_image[0];
+		$data['avatar'] = $avatar;
 		$data['sale_off'] = $this->input->post('sale_off');
 		$data['views'] = 0;
 		$data['description'] = $this->input->post('description');
@@ -69,7 +86,7 @@ class Products extends MY_Controller {
 		{
 			$last_id = $this->db->insert_id();
 			/*insert list image of Products*/
-			foreach($list_image as $value)
+			foreach($image as $value)
 			{
 				$img['id_products'] = $last_id;
 				$img['name'] =  $value;
@@ -87,7 +104,6 @@ class Products extends MY_Controller {
 			$info['battery_charge'] = $this->input->post('battery');
 			$info['utilities'] = $this->input->post('utilities');
 			$this->Products_info_model->create($info);
-
 			$this->session->set_flashdata('flash_message', 'Thêm Thành Công');
 			redirect('admin/products');
 		}else{
@@ -206,31 +222,4 @@ class Products extends MY_Controller {
 			redirect('admin/products');
 		}
 	}
-	public function ajaxPostImage()
-	{
-		$config['upload_path'] = './images/products';
-		$config['allowed_types'] = 'jpg|jpeg|png|gif';
-		$config['file_name'] = time().$_FILES['file']['name'];
-		$config['max_size'] = '10240';
-		$config['max_width']  = '5000';
-		$config['max_height']  = '5000';
-		$this->load->library("upload", $config);
-		if($this->upload->do_upload("file"))
-		{
-			if($this->session->userdata(list_image)) {
-				$list_image=array();
-				$list_image[]=$this->session->userdata('list_image');
-				$this->session->set_userdata('list_image',$list_image);
-			}
-			else
-			{
-				$this->session->set_userdata('list_image',$config['file_name']);
-			}
-		}
-		else{
-			pre('die');
-		}
-		return true;
-	}
-
 }

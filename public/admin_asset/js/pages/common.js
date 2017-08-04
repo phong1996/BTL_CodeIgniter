@@ -344,6 +344,9 @@ $("#frm_pr_add").validate({
             name: {
                 required: 'Không được bỏ trống'
             },
+             images: {
+                required: 'Không được bỏ trống'
+            },
             price: {
                 required: 'Không được bỏ trống'
             },
