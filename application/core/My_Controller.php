@@ -10,7 +10,6 @@ Class MY_Controller extends CI_Controller
 
         $this->load->model('Producer_model');
         $this->session->set_userdata('menu',$this->Producer_model->list_menu());
-
         switch($controller)
         {
             case 'admin':
