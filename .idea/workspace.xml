@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa4948ec-229f-46f5-af02-fd603c3daa80" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/products/add.php" afterPath="$PROJECT_DIR$/application/views/admin/products/add.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/admin_asset/js/pages/common.js" afterPath="$PROJECT_DIR$/public/admin_asset/js/pages/common.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/admin/Products.php" afterPath="$PROJECT_DIR$/application/controllers/admin/Products.php" />
     </list>
     <ignored path="BTL_CodeIgniter.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,8 +44,8 @@
       <file leaf-file-name="Products.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/admin/Products.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.4328523">
-              <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+            <state vertical-scroll-proportion="-0.031076582">
+              <caret line="50" column="25" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -234,11 +233,11 @@
         <option value="$PROJECT_DIR$/application/core/MY_Model.php" />
         <option value="$PROJECT_DIR$/application/views/admin/products/ajax/ajaxAvatar.php" />
         <option value="$PROJECT_DIR$/application/views/admin/products/index.php" />
-        <option value="$PROJECT_DIR$/application/controllers/admin/Products.php" />
         <option value="$PROJECT_DIR$/public/admin_asset/js/pages/common.js" />
         <option value="$PROJECT_DIR$/application/models/Products_model.php" />
         <option value="$PROJECT_DIR$/application/controllers/Home.php" />
         <option value="$PROJECT_DIR$/application/views/front/layout/home.php" />
+        <option value="$PROJECT_DIR$/application/controllers/admin/Products.php" />
       </list>
     </option>
   </component>
@@ -1127,8 +1126,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/admin/Products.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.4328523">
-          <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+        <state vertical-scroll-proportion="-0.031076582">
+          <caret line="50" column="25" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
           <folding />
         </state>
       </provider>
