@@ -36,11 +36,31 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="latest-product">
-                    <h2 class="section-title" style="font-family: 'Open Sans Condensed', sans-serif">Sản phẩm mới nhất</h2>
+                    <h2 class="section-title">Latest Products</h2>
                     <div class="product-carousel">
-                       
-                                }
+                        <?php
+                        if(isset($list_last_products)){
+                            foreach($list_last_products as $key => $value)
+                            {
+                                ?>
+                                <div class="single-product">
+                                    <div class="product-f-image">
+                                        <img src="<?php echo base_url().'images/products/'.$value['avatar']?>" alt="">
+                                        <div class="product-hover">
+                                            <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                            <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                        </div>
+                                    </div>
+
+                                    <h2><a href="single-product.html">Samsung Galaxy s5- 2015</a></h2>
+
+                                    <div class="product-carousel-price">
+                                        <ins>$700.00</ins> <del>$100.00</del>
+                                    </div>
+                                </div>
+                                <?php
                             }
+                        }
                         ?>
                     </div>
                 </div>
@@ -48,7 +68,18 @@
         </div>
     </div>
 </div> <!-- End main content area -->
-
+<!--
+  [id] => 52
+            [id_producer] => 8
+            [name] => User name
+            [price] => 4500000
+            [quantyti] => 54
+            [avatar] => zeaik62QsOl1nGxB5s2(Copy).jpg
+            [sale_off] => 3
+            [views] => 0
+            [description] => sdfsdfsdfsdfsdf
+            [status] => 1
+-->
 <div class="brands-area">
     <div class="zigzag-bottom"></div>
     <div class="container">

@@ -230,18 +230,13 @@
         </div>
         <div id="collapseTwo_1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo_1" aria-expanded="false" style="height: 0px;">
             <div class="panel-body">
-                <div class="row clearfix">
-                    <form action="ajaxPostImage" class="dropzone" id="myAwesomeDropzone">
-                        <div class="dz-message">
-                            <div class="drag-icon-cph">
-                                <i class="material-icons">touch_app</i>
-                            </div>
-                            <h3>Drop files here or click to upload.</h3>
-                        </div>
-                    </form>
+               <div class="form-group">
+                <div class="form-line">
+                    <input type="file" accept="image/*" name="images[]" multiple id="images"  required class="form-control" placeholder="Enter your image">
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </div>
 <button id="submitform" class="btn btn-primary pull-right">Thêm</button>
@@ -255,17 +250,7 @@
         $('#collapseOne_1').collapse("show");
         $('#collapseThree_1').collapse("show");
         $('#collapseTwo_1').collapse("show");
-        Dropzone.options.myAwesomeDropzone = {
-        paramName: "file", // The name that will be used to transfer the file
-        maxFilesize: 3, // MB
-        resizeWidth:100,
-        resizeHeight:100,
-        acceptedFiles:'image/*',
-        addRemoveLinks: true,
-        removedfile:function (file) {
-            file.previewElement.parentNode.removeChild(file.previewElement);
-        }
-    };
+     
     $('#submitform').click(function () {
         $('#frm_pr_add').submit();
     })

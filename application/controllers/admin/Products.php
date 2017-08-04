@@ -30,6 +30,7 @@ class Products extends MY_Controller {
 		$avatar_aj = $this->Images_model->get_list_if('*', ['id_products' => $this->input->post('avatar_id')]);
 		$this->load->view('admin/products/ajax/ajaxAvatar',['avatar'=>$avatar_aj,'pr_id'=>$this->input->post('avatar_id')]);
 	}
+
 	public function choiceAvatar()
 	{
 		$this->Products_model->update($this->input->post('pr_id'),['avatar'=>$this->input->post('image_name')]);
@@ -48,7 +49,7 @@ class Products extends MY_Controller {
 	{
 		/*upload images*/
 		$list_image=$this->session->userdata('list_image');
-		pre($list_image);
+		pre($this->session->userdata('list_image'));
 		$img = array();
 		$config = array();
 		$config['upload_path']   = './images/products';

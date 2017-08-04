@@ -111,7 +111,6 @@ var url_root = 'http://localhost/BTL_CodeIgniter/';
             success: function (data) {
                $(".avt_"+pr_id).html("<img src='"+link+"' width=100>");
                 $("#myModal").modal('hide');
-
             }
         });
     });
@@ -289,7 +288,7 @@ jQuery.validator.addMethod("special_character", function (value, element) {
             }
         }
 });
-$("#frm_pr_add").validate({
+$("#frm_pr_ad").validate({
         rules: {
             producer: {
                 required: true
@@ -342,6 +341,9 @@ $("#frm_pr_add").validate({
                 required: 'Không được bỏ trống'
             },
             name: {
+                required: 'Không được bỏ trống'
+            },
+             images: {
                 required: 'Không được bỏ trống'
             },
             price: {
