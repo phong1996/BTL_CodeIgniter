@@ -32,7 +32,7 @@
 
                                     <label class="input-group-btn">
                                       <span class="btn btn-primary">
-                                          Browse… <input id="file_edit" accept="image/*" name="file_edit" type="file" style="display: none;" multiple="">
+                                          Browse… <input id="file_edit" accept="image/*" name="image" type="file" style="display: none;" multiple="">
                                       </span>
                                   </label>
                               </div>
