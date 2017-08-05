@@ -107,9 +107,15 @@
                 <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                     <div class="form-group">
                         <div class="form-line">
-                            <input type="text" name="description" id="description" class="form-control" placeholder="">
+                            <textarea name="description" id="description" class="form-control" placeholder=""></textarea>
                         </div>
                     </div>
+                    <script type="text/javascript">
+                    $(document).ready(function() {
+                        CKEDITOR.replace('description');
+                    });
+                         
+                    </script>
                 </div>
             </div>
             <div class="row clearfix">

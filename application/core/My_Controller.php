@@ -7,7 +7,7 @@ Class MY_Controller extends CI_Controller
         parent::__construct();
         $controller = $this->uri->segment(1);
         $controller = strtolower($controller);
-
+        $this->load->library('cart');
         $this->load->model('Producer_model');
         $this->session->set_userdata('menu',$this->Producer_model->list_menu());
         switch($controller)
