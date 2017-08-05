@@ -274,6 +274,7 @@
             }
         })
         CKEDITOR.replace( 'content' );
+       
 </script>
 <?php if($this->session->flashdata('flash_message')) { ?>
 <script type="text/javascript">

@@ -3,8 +3,11 @@ Class Products_model extends MY_Model
 {
     protected $table='products';
 
-
-
+    public function get_same_product($id)
+    {
+       $id_produce=$this->get_info($id,'*')->id_producer;
+       return $this->get_list_if(array('10' ,'0'),['id_producer'=>$id_produce]);
+    }
     public function delete_pr($id)
     {
         $query = array();

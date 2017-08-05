@@ -1,3 +1,6 @@
+<section class="content">
+    <?php $this->load->view('front/layout/slide'); ?>
+</section>
 <div class="promo-area">
     <div class="zigzag-bottom"></div>
     <div class="container">
@@ -48,7 +51,7 @@
                                         <img src="<?php echo base_url().'images/products/'.$value['avatar']?>" alt="">
                                         <div class="product-hover">
                                             <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                            <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                            <a href="<?php echo base_url().'productdetail/detail/'.$value['id']; ?>" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                         </div>
                                     </div>
 
