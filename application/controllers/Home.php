@@ -18,6 +18,8 @@ class Home extends MY_Controller {
 		$this->data['list_slide'] = $list_slide;
 		$list_last_produts = $this->Products_model->get_image_limit();
 		$this->data['list_last_products'] = $list_last_produts;
+		$hot_roducts = $this->Products_model->get_products_limit();
+		$this->data['hot_roducts'] = $hot_roducts;
 		$this->data['content'] = 'front/layout/home';
 		$this->data['menu'] = 'front/layout/menu';
 		$this->data['slide'] = 'front/layout/slide';

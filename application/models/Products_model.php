@@ -37,4 +37,10 @@ Class Products_model extends MY_Model
         $query = $this->db->get();
         return $query;
     }
+
+    public function get_products_limit()
+    {
+        $query = $this->db->query('select * from `products` ORDER BY id DESC LIMIT 12');
+        return $query->result_array();
+    }
 }

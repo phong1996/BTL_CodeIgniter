@@ -118,12 +118,11 @@
                 <div class="single-product-widget">
                     <h2 class="product-wid-title">Hot Products</h2>
                     <a href="" class="wid-view-more">View All</a>
-                 <!--   --><?php /*if(isset($_SESSION['products_all'])){
-                        foreach($_SESSION['products_all'] as $key => $value)
-                        {
-                            */?>
+                 <?php if(isset($hot_roducts)){
+                        foreach($hot_roducts as $key => $value) {
+                            ?>
                             <div class="single-wid-product col-md-4">
-                                <a href=""><img src="" alt="" class="product-thumb"></a>
+                                <a href=""><img src="<?php echo base_url().'images/products/'.$value['avatar']?>" alt="" class="product-thumb"></a>
                                 <h2><a href=""></a></h2>
                                 <div class="product-wid-rating">
                                     <i class="fa fa-star"></i>
@@ -133,128 +132,17 @@
                                     <i class="fa fa-star"></i>
                                 </div>
                                 <div class="product-wid-price">
-                                    <ins>234</ins> <del>444222</del>
+                                    <ins style="color: red"><?php echo $sale = number_format($value['price'] - ($value['price'] * $value['sale_off'])/100)?>(VND)</ins>
+                                    <del><?php echo number_format($value['price'])?>(VND)</del>
                                 </div>
                             </div>
-                    <div class="single-wid-product col-md-4">
-                        <a href=""><img src="" alt="" class="product-thumb"></a>
-                        <h2><a href=""></a></h2>
-                        <div class="product-wid-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <div class="product-wid-price">
-                            <ins>234</ins> <del>444222</del>
-                        </div>
-                    </div>
-                    <div class="single-wid-product col-md-4">
-                        <a href=""><img src="" alt="" class="product-thumb"></a>
-                        <h2><a href=""></a></h2>
-                        <div class="product-wid-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <div class="product-wid-price">
-                            <ins>234</ins> <del>444222</del>
-                        </div>
-                    </div>
-                    <div class="single-wid-product col-md-4">
-                        <a href=""><img src="" alt="" class="product-thumb"></a>
-                        <h2><a href=""></a></h2>
-                        <div class="product-wid-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <div class="product-wid-price">
-                            <ins>234</ins> <del>444222</del>
-                        </div>
-                    </div>
-                    <div class="single-wid-product col-md-4">
-                        <a href=""><img src="" alt="" class="product-thumb"></a>
-                        <h2><a href=""></a></h2>
-                        <div class="product-wid-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <div class="product-wid-price">
-                            <ins>234</ins> <del>444222</del>
-                        </div>
-                    </div>
-                    <div class="single-wid-product col-md-4">
-                        <a href=""><img src="" alt="" class="product-thumb"></a>
-                        <h2><a href=""></a></h2>
-                        <div class="product-wid-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <div class="product-wid-price">
-                            <ins>234</ins> <del>444222</del>
-                        </div>
-                    </div>
-                    <div class="single-wid-product col-md-4">
-                        <a href=""><img src="" alt="" class="product-thumb"></a>
-                        <h2><a href=""></a></h2>
-                        <div class="product-wid-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <div class="product-wid-price">
-                            <ins>234</ins> <del>444222</del>
-                        </div>
-                    </div>
-                    <div class="single-wid-product col-md-4">
-                        <a href=""><img src="" alt="" class="product-thumb"></a>
-                        <h2><a href=""></a></h2>
-                        <div class="product-wid-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <div class="product-wid-price">
-                            <ins>234</ins> <del>444222</del>
-                        </div>
-                    </div>
-                    <div class="single-wid-product col-md-4">
-                        <a href=""><img src="" alt="" class="product-thumb"></a>
-                        <h2><a href=""></a></h2>
-                        <div class="product-wid-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <div class="product-wid-price">
-                            <ins>234</ins> <del>444222</del>
-                        </div>
-                    </div>
-
                             <?php
-/*                        }
-                    } */?>
+                        }
+                        }
+                    ?>
                 </div>
             </div>
 
         </div>
     </div>
-</div> <!-- End product widget area -->
+</div>
