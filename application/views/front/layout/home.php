@@ -61,7 +61,7 @@
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
                                     </div>
-                                    <h2><a href="single-product.html"><b><?php echo $value['name']?></b></a></h2>
+                                    <h2><a href="<?php echo base_url().'productdetail/detail/'.$value['id']; ?>"><b><?php echo $value['name']?></b></a></h2>
 
                                     <div class="product-carousel-price">
                                         <ins style="color: red"><?php echo $sale = number_format($value['price'] - ($value['price'] * $value['sale_off'])/100)?>(VND)</ins> <del><?php echo number_format($value['price'])?>(VND)</del>
@@ -100,7 +100,7 @@
                         foreach($this->session->userdata('menu') as $value)
                         {
                             ?>
-                            <img src="<?php echo 'images/logo/'.$value->logo ?>" alt="">
+                            <img src="<?php echo $value->logo ?>" alt="">
 
                         <?php } ?>
                     </div>

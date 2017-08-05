@@ -111,7 +111,7 @@
                         <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                             <div class="form-group">
                                 <div class="form-line">
-                                    <textarea name="description" id="description" class="form-control" placeholder=""></textarea>
+                                    <textarea name="description" id="description" class="form-control" placeholder=""><?php echo $products->description  ?></textarea>
                                 </div>
                             </div>
                             <script type="text/javascript">

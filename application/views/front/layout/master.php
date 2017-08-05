@@ -71,7 +71,7 @@
         <div class="row">
             <div class="col-sm-6">
                 <div class="logo">
-                    <h1><a href="./"><img src="<?php echo public_front_url()?>/img/logo.png"></a></h1>
+                    <h1><a href="<?php echo base_url().'home'; ?>"><img src="<?php echo public_front_url()?>/img/logo.png"></a></h1>
                 </div>
             </div>
 
