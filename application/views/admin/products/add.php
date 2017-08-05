@@ -24,7 +24,7 @@
                 <div class="panel-body">
                    <div class="row clearfix">
                     <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                        <label for="email_address_2">Producer</label>
+                        <label for="email_address_2">Nhà sản xuất</label>
                     </div>
                     <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                         <select name="producer" class="form-control ">
@@ -41,7 +41,7 @@
                 </div>
                 <div class="row clearfix">
                     <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                        <label for="password_2">Name</label>
+                        <label for="password_2">Tên</label>
                     </div>
                     <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                         <div class="form-group">
@@ -53,7 +53,7 @@
                 </div>
                 <div class="row clearfix">
                     <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                        <label for="password_2">Price</label>
+                        <label for="password_2">Giá</label>
                     </div>
                     <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                         <div class="form-group">
@@ -65,7 +65,7 @@
                 </div>
                 <div class="row clearfix">
                     <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                        <label for="password_2">Quantyti</label>
+                        <label for="password_2">Số lượng</label>
                     </div>
                     <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                         <div class="form-group">
@@ -77,7 +77,7 @@
                 </div>
                 <div class="row clearfix">
                     <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                        <label for="password_2">Sale_Off</label>
+                        <label for="password_2">Khuyến mại</label>
                     </div>
                     <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                         <div class="form-group">
@@ -102,7 +102,7 @@
             <div class="panel-body">
              <div class="row clearfix">
                 <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                    <label for="password_2">Description</label>
+                    <label for="password_2">Mô tả</label>
                 </div>
                 <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                     <div class="form-group">
@@ -120,7 +120,7 @@
             </div>
             <div class="row clearfix">
                 <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                    <label for="password_2">Display</label>
+                    <label for="password_2">Màn hình</label>
                 </div>
                 <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                     <div class="form-group">
@@ -146,7 +146,7 @@
 
             <div class="row clearfix">
                 <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                    <label for="password_2">Operating</label>
+                    <label for="password_2">Hệ điều hành</label>
                 </div>
                 <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                     <div class="form-group">
@@ -159,7 +159,7 @@
 
             <div class="row clearfix">
                 <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                    <label for="password_2">Storage</label>
+                    <label for="password_2">Bộ nhớ</label>
                 </div>
                 <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                     <div class="form-group">
@@ -172,7 +172,7 @@
 
             <div class="row clearfix">
                 <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                    <label for="password_2">Network</label>
+                    <label for="password_2">Mạng</label>
                 </div>
                 <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                     <div class="form-group">
@@ -185,7 +185,7 @@
 
             <div class="row clearfix">
                 <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                    <label for="password_2">Design</label>
+                    <label for="password_2">Thiết kế</label>
                 </div>
                 <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                     <div class="form-group">
@@ -198,7 +198,7 @@
 
             <div class="row clearfix">
                 <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                    <label for="password_2">Battery_Change</label>
+                    <label for="password_2">Dung lượng Pin</label>
                 </div>
                 <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                     <div class="form-group">
@@ -211,7 +211,7 @@
 
             <div class="row clearfix">
                 <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                    <label for="password_2">Utilities</label>
+                    <label for="password_2">Tiện ích</label>
                 </div>
                 <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
                     <div class="form-group">
