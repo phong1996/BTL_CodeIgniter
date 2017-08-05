@@ -36,6 +36,9 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <script src="https://uhchat.net/code.php?f=9f1ce5"></script>
+
 </head>
 <body style="font-family: 'Open Sans Condensed', sans-serif">
 <div id="fb-root"></div>
@@ -53,7 +56,7 @@
                 <div class="user-menu">
                     <ul>
                         <li><a href="#"><i class="fa fa-user"></i> Tài khoản</a></li>
-                        <li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i> Đăng nhập</a></li>
+                        <li><a class="cd-signin" href="#"><i class="fa fa-user"></i> Đăng nhập</a></li>
                         <li><a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i> Đăng xuất</a></li>
                         <li><a href="#"><i class="fa fa-users" aria-hidden="false"></i> Đăng ký</a></li>
                     </ul>
@@ -191,5 +194,6 @@
 <!-- Slider -->
 <script type="text/javascript" src="<?php echo public_front_url()?>/js/bxslider.min.js"></script>
 <script type="text/javascript" src="<?php echo public_front_url()?>/js/script.slider.js"></script>
+<script type="text/javascript" src="<?php echo public_front_url()?>/popup_login/js/main.js"></script>
 </body>
 </html>
