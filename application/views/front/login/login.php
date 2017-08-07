@@ -8,6 +8,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <head>
 <title>Khách Hàng Đăng Nhập</title>
 <script src="<?php echo public_url() ?>/login/js/jquery.min.js"></script>
+	<script src="<?php  echo public_url();?>/js/pages/jquery.validate.min.js"></script>
+	<script src="<?php  echo public_url();?>/js/pages/common.js"></script>
 <!-- Custom Theme files -->
 <link href="<?php echo public_url() ?>/login/css/style.css" rel="stylesheet" type="text/css" media="all"/>
 <!-- for-mobile-apps -->
@@ -18,6 +20,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- //for-mobile-apps -->
 <!--Google Fonts-->
 <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+
 </head>
 <body>
 <!--header start here-->

@@ -61,7 +61,7 @@
                            <?php
                        } ?>
                         <?php if(isset($this->session->userdata('customer_login')->fullname)){
-                            ?><li><a href="#"><i class="fa fa-user"></i>Xin Chào: <b><?php echo $this->session->userdata('customer_login')->fullname; ?></b></a></li>
+                            ?><li><a href="Userinfo/index/<?php echo $this->session->userdata('customer_login')->id; ?>"><i class="fa fa-user"></i>Xin Chào: <b><?php echo $this->session->userdata('customer_login')->fullname; ?></b></a></li>
                             <li><a href="login/logOut"><i class="fa fa-sign-out" aria-hidden="true"></i> Đăng xuất</a></li><?php
                         } ?>
 

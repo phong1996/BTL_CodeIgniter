@@ -441,6 +441,19 @@ $("#frm_edit").validate({
         }
 });
 
+$("#frm_regis_user").validate({
+    rule: {
+        username:{
+            required: true
+        }
+    },
+    messages: {
+        username:{
+            required:'ko de trong'
+        }
+    }
+});
+
 
 $('#file_edit').change(function(event) {
     $('#image').attr('src',URL.createObjectURL(event.target.files[0]));
