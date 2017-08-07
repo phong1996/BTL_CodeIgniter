@@ -18,7 +18,7 @@ class Productdetail extends MY_Controller {
 		$this->data['same_product']=$this->products_model->get_same_product($id);
 		$this->data['product_info']=$this->products_info_model->get_info_rule(['id_products'=>$id],"*");
 		$this->data['product']=$this->products_model->get_info($id,"*");
-		$this->data['Images']=$this->images_model->get_list_if(['id_products'=>$id]);
+		$this->data['Images']=$this->images_model->get_list_if([],['id_products'=>$id]);		
 		$this->data['content']='front/layout/productdetail';
 		return $this->load->view('front/layout/master',$this->data);
 	}

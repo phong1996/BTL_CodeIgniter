@@ -13,7 +13,7 @@
 		public function index()
 		{
 			$this->data['cart']=$this->cart->contents();
-			pre($this->data['cart']);
+			//pre($this->data['cart']);
 			$this->data['content']='front/cart/index';
 			return $this->load->view('front/layout/master',$this->data);
 		}

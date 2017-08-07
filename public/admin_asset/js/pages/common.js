@@ -1,6 +1,6 @@
 
 
-var url_root = 'http://localhost/BTL_CodeIgniter/';
+var url_root = 'http://localhost:88/btl/';
     $(".user_status").click(function () {
         var user_status = 0;
         if ($(this).prop('checked') === true) {

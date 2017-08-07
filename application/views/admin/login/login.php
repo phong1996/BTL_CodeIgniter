@@ -23,7 +23,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!--header start here-->
 <div class="header">
 		<div class="header-main">
-		       <h1>Classy Login Form</h1>
+		       <h1>Administrator login</h1>
 			<div class="header-bottom">
 				<div style="color: red;text-align: center;">
 					<?php echo $this->session->flashdata('fail_login'); ?>
