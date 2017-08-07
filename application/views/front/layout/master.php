@@ -19,6 +19,7 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
 
+
     <!-- Bootstrap -->
     <link rel="stylesheet" href="<?php echo public_front_url()?>/css/bootstrap.min.css">
 
@@ -29,15 +30,13 @@
     <link rel="stylesheet" href="<?php echo public_front_url()?>/css/owl.carousel.css">
     <link rel="stylesheet" href="<?php echo public_front_url()?>/style.css">
     <link rel="stylesheet" href="<?php echo public_front_url()?>/css/responsive.css">
+    <link rel="stylesheet" href="<?php echo public_front_url()?>/popup_login/css/reset.css"> <!-- CSS reset -->
+    <link rel="stylesheet" href="<?php echo public_front_url()?>/popup_login/css/style.css"> <!-- Gem style -->
+    <script src="<?php echo public_front_url()?>/popup_login/js/modernizr.js"></script>
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
 
-    <script src="https://uhchat.net/code.php?f=9f1ce5"></script>
+
+
 
 </head>
 <body style="font-family: 'Open Sans Condensed', sans-serif">
@@ -55,10 +54,18 @@
             <div class="col-md-12">
                 <div class="user-menu">
                     <ul>
-                        <li><a href="#"><i class="fa fa-user"></i> Tài khoản</a></li>
-                        <li><a class="cd-signin" href="#"><i class="fa fa-user"></i> Đăng nhập</a></li>
-                        <li><a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i> Đăng xuất</a></li>
-                        <li><a href="#"><i class="fa fa-users" aria-hidden="false"></i> Đăng ký</a></li>
+                       <?php if(!isset($this->session->userdata('user_login')->fullname)){
+                           ?>
+                           <li><a class="cd-signin" href="login"><i class="fa fa-user"></i> Đăng nhập</a></li>
+                           <li><a href="#"><i class="fa fa-users" aria-hidden="false"></i> Đăng ký</a></li>
+                           <?php
+                       } ?>
+                        <?php if(isset($this->session->userdata('user_login')->fullname)){
+                            ?><li><a href="#"><i class="fa fa-user"></i>Xin Chào: <b><?php echo $this->session->userdata('user_login')->fullname; ?></b></a></li>
+                            <li><a href="login/logOut"><i class="fa fa-sign-out" aria-hidden="true"></i> Đăng xuất</a></li><?php
+                        } ?>
+
+
                     </ul>
                 </div>
             </div>
@@ -66,6 +73,101 @@
         </div>
     </div>
 </div> <!-- End header area -->
+
+<div class="cd-user-modal"> <!-- this is the entire modal form, including the background -->
+    <div class="cd-user-modal-container"> <!-- this is the container wrapper -->
+        <ul class="cd-switcher">
+            <li><a href="">Sign in</a></li>
+            <li><a href="">New account</a></li>
+        </ul>
+
+        <div id="cd-login"> <!-- log in form -->
+            <form id="form" class="cd-form" action="" method="get">
+                <input type="hidden" name="action" value="cus_login">
+                <p class="fieldset">
+                    <label class="image-replace cd-email" for="signin-email">E-mail</label>
+                    <input class="full-width has-padding has-border" id="signin-email" type="email"  required name="username" placeholder="E-mail">
+                    <span class="cd-error-message">Error message here!</span>
+                </p>
+
+                <p class="fieldset">
+                    <label class="image-replace cd-password" for="signin-password">Password</label>
+                    <input class="full-width has-padding has-border" id="signin-password" type="text" required name="password" placeholder="Password">
+                    <a href="" class="hide-password">Hide</a>
+                    <span class="cd-error-message">Error message here!</span>
+                </p>
+                <p class="fieldset" id="submit">
+                    <input class="full-width" type="submit" name="login_submit" value="Login">
+                </p>
+            </form>
+
+            <p class="cd-form-bottom-message"><a href="#0">Forgot your password?</a></p>
+            <!-- <a href="#0" class="cd-close-form">Close</a> -->
+        </div> <!-- cd-login -->
+
+
+
+        <div id="cd-signup"> <!-- sign up form -->
+            <form class="cd-form" id="frm-regis" action="" method="get">
+                <input type="hidden" name="action" value="cus_regis">
+
+                <p class="fieldset">
+                    <label class="image-replace cd-username" for="signup-name">Full Name</label>
+                    <input class="full-width has-padding has-border" id="signup-name" type="text" name="name" required placeholder="Name">
+                    <span class="cd-error-message">Error message here!</span>
+                </p>
+
+                <p class="fieldset">
+                    <label class="image-replace cd-email" for="signup-email">E-mail</label>
+                    <input class="full-width has-padding has-border" id="signup-email" type="text" name="email" required placeholder="E-mail">
+                    <span class="cd-error-message">Error message here!</span>
+                </p>
+
+                <p class="fieldset">
+                    <label class="image-replace cd-password" for="signup-password">Password</label>
+                    <input class="full-width has-padding has-border" id="signup-password" type="text" name="password" required placeholder="Password">
+                    <a href="#0" class="hide-password">Hide</a>
+                    <span class="cd-error-message">Error message here!</span>
+                </p>
+
+                <p class="fieldset">
+                    <label class="image-replace cd-username" for="signup-username">Phone Number</label>
+                    <input class="full-width has-padding has-border" id="signup-phone" type="text" name="phone" required placeholder="Phone">
+                    <span class="cd-error-message">Error message here!</span>
+                </p>
+
+                <p class="fieldset" id="submits">
+                    <input class="full-width has-padding" type="submit" value="Create account">
+                </p>
+            </form>
+
+            <!-- <a href="#0" class="cd-close-form">Close</a> -->
+        </div> <!-- cd-signup -->
+
+
+
+        <div id="cd-reset-password"> <!-- reset password form -->
+            <p class="cd-form-message">Lost your password? Please enter your email address. You will receive a link to create a new password.</p>
+
+            <form class="cd-form" action="" method="get">
+                <input type="hidden" name="action" value="resetPassword">
+                <p class="fieldset">
+                    <label class="image-replace cd-email" for="reset-email">E-mail</label>
+                    <input class="full-width has-padding has-border" id="reset-email" type="email" name="email" placeholder="E-mail">
+                    <span class="cd-error-message">Error message here!</span>
+                </p>
+
+                <p class="fieldset">
+                    <input class="full-width has-padding" type="submit" value="Reset password">
+                </p>
+            </form>
+
+            <p class="cd-form-bottom-message"><a href="#0">Back to log-in</a></p>
+        </div> <!-- cd-reset-password -->
+        <a href="#0" class="cd-close-form">Close</a>
+    </div> <!-- cd-user-modal-container -->
+</div> <!-- cd-user-modal -->
+
 
 
 
@@ -176,6 +278,8 @@
 </div> <!-- End footer bottom area -->
 
 <!-- Latest jQuery form server -->
+
+
 <script src="https://code.jquery.com/jquery.min.js"></script>
 
 <!-- Bootstrap JS form CDN -->
@@ -194,6 +298,13 @@
 <!-- Slider -->
 <script type="text/javascript" src="<?php echo public_front_url()?>/js/bxslider.min.js"></script>
 <script type="text/javascript" src="<?php echo public_front_url()?>/js/script.slider.js"></script>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
+
+<script src="https://uhchat.net/code.php?f=9f1ce5"></script>
 <script type="text/javascript" src="<?php echo public_front_url()?>/popup_login/js/main.js"></script>
+
+
 </body>
 </html>
