@@ -54,14 +54,14 @@
             <div class="col-md-12">
                 <div class="user-menu">
                     <ul>
-                       <?php if(!isset($this->session->userdata('user_login')->fullname)){
+                       <?php if(!isset($this->session->userdata('customer_login')->fullname)){
                            ?>
                            <li><a class="cd-signin" href="login"><i class="fa fa-user"></i> Đăng nhập</a></li>
                            <li><a href="#"><i class="fa fa-users" aria-hidden="false"></i> Đăng ký</a></li>
                            <?php
                        } ?>
-                        <?php if(isset($this->session->userdata('user_login')->fullname)){
-                            ?><li><a href="#"><i class="fa fa-user"></i>Xin Chào: <b><?php echo $this->session->userdata('user_login')->fullname; ?></b></a></li>
+                        <?php if(isset($this->session->userdata('customer_login')->fullname)){
+                            ?><li><a href="#"><i class="fa fa-user"></i>Xin Chào: <b><?php echo $this->session->userdata('customer_login')->fullname; ?></b></a></li>
                             <li><a href="login/logOut"><i class="fa fa-sign-out" aria-hidden="true"></i> Đăng xuất</a></li><?php
                         } ?>
 

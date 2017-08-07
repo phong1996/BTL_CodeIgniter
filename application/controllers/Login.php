@@ -46,7 +46,7 @@ class Login extends MY_Controller {
 
             $where = array('username' => $username, 'password' => $password);
             $user = $this->Login_model->get_info_rule($where);
-            $this->session->set_userdata('user_login', $user);
+            $this->session->set_userdata('customer_login', $user);
             $this->session->set_flashdata('flash_message', 'Đăng nhập thành công');
             return redirect('home');
         }
