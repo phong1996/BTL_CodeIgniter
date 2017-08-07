@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="<?php echo public_front_url()?>/popup_login/css/reset.css"> <!-- CSS reset -->
     <link rel="stylesheet" href="<?php echo public_front_url()?>/popup_login/css/style.css"> <!-- Gem style -->
     <script src="<?php echo public_front_url()?>/popup_login/js/modernizr.js"></script>
-
+    <script src="https://code.jquery.com/jquery.min.js"></script>
 
 
 
@@ -280,7 +280,7 @@
 <!-- Latest jQuery form server -->
 
 
-<script src="https://code.jquery.com/jquery.min.js"></script>
+
 
 <!-- Bootstrap JS form CDN -->
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>

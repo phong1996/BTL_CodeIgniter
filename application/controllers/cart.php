@@ -13,15 +13,63 @@
 		public function index()
 		{
 			$this->data['cart']=$this->cart->contents();
-			//pre($this->data['cart']);
 			$this->data['content']='front/cart/index';
 			return $this->load->view('front/layout/master',$this->data);
 		}
 		public function add()
 		{ 
-			$cart= (array) $this->Products_model->get_info($this->input->post('id_product'),'*');
-			$cart['count']=$this->input->post('quantity');
-			$this->cart->insert($cart);
+			$product=$this->Products_model->get_info($this->input->post('id_product'));
+			$data=array(
+				'id'=>$product->id,
+				'qty'=>$this->input->post('quantity'),
+				'price'=>$product->price,
+				'avatar'=>$product->avatar,
+				 'name'=>$product->name,
+				);
+			$this->cart->insert($data);
+			return redirect('cart');
+		}
+		public function update()
+		{
+			if($this->input->post('delete'))
+			{
+				$this->cart->destroy();
+				return redirect('cart');
+			}
+			if($this->input->post('update'))
+			{
+				$cart=$this->cart->contents();
+				foreach ($cart as $key => $value) {
+					$qty=$this->input->post('qty_'.$value['rowid']);
+					$data=array();
+					$data['qty']=$qty;
+					$data['rowid']=$key;
+					$this->cart->update($data);
+				}
+				return redirect('cart');
+			}
+			if($this->input->post('pay'))
+			{
+
+			}
+			else
+			{
+				redirect('home');
+			}
+		}
+
+		public function deleteItem($id)
+		{
+			$cart=$this->cart->contents();
+			foreach ($cart as $key => $value) {
+				if($value['rowid']==$id)
+				{
+					$data=array();
+					$data['qty']=0;
+					$data['rowid']=$key;
+					$this->cart->update($data);
+				}
+			}
 			return redirect('cart');
 		}
 	}
