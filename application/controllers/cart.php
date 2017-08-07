@@ -18,7 +18,7 @@
 			return $this->load->view('front/layout/master',$this->data);
 		}
 		public function add()
-		{
+		{ 
 			$cart= (array) $this->Products_model->get_info($this->input->post('id_product'),'*');
 			$cart['count']=$this->input->post('quantity');
 			$this->cart->insert($cart);
