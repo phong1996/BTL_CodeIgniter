@@ -56,8 +56,9 @@
                     <ul>
                        <?php if(!isset($this->session->userdata('customer_login')->fullname)){
                            ?>
-                           <li><a class="cd-signin" href="login"><i class="fa fa-user"></i> Đăng nhập</a></li>
-                           <li><a href="<?php echo base_url()?>register"><i class="fa fa-users" aria-hidden="false"><i class="fa fa-users" aria-hidden="false"></i> Đăng ký</a></li>
+
+                           <li><a class="cd-signin" href="<?php echo base_url()?>/login"><i class="fa fa-user"></i> Đăng nhập</a></li>
+                           <li><a href="<?php echo base_url()?>register"><i class="fa fa-users" aria-hidden="false"></i> Đăng ký</a></li>
                            <?php
                        } ?>
                         <?php if(isset($this->session->userdata('customer_login')->fullname)){

@@ -6,9 +6,12 @@
     <div class="container">
         <div class="row" style="font-family: 'Open Sans Condensed', sans-serif">
             <div class="col-md-3 col-sm-6">
-                <div class="single-promo promo1">
-                    <i class="fa fa-refresh"></i>
-                    <p>30 Ngày Đổi Trả</p>
+                <div class="single-sidebar">
+                    <h2 class="sidebar-title">Tìm Kiếm Sản Phẩm</h2>
+                    <form action="<?php echo base_url()?>search" method="post">
+                        <input style="color: black;" type="text" placeholder="Tên sản phẩm..." name="pr_name">
+                        <input type="submit" value="Tìm Kiếm">
+                    </form>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
@@ -17,10 +20,11 @@
                     <p>Miễn Phí Giao Hàng</p>
                 </div>
             </div>
+
             <div class="col-md-3 col-sm-6">
-                <div class="single-promo promo3">
-                    <i class="fa fa-lock"></i>
-                    <p>Bảo Mật Thông Tin</p>
+                <div class="single-promo promo1">
+                    <i class="fa fa-refresh"></i>
+                    <p>30 Ngày Đổi Trả</p>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">

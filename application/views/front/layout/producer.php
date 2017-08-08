@@ -2,7 +2,28 @@
     <div class="zigzag-bottom"></div>
     <div class="container">
         <div class="row">
-            <?php if(isset($list_user)){
+            <?php if(isset($list_pro)){
+
+                foreach($list_pro as $key => $value)
+                {
+                    ?>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single-shop-product">
+                            <div class="product-upper">
+                                <img src="<?php echo base_url().'images/products/'.$value->avatar?>" alt="">
+                            </div>
+                            <h2><a href="<?php echo base_url().'productdetail/detail/'.$value->id; ?>"><b><?php echo $value->name?></b></a></h2>
+                            <div class="product-carousel-price">
+                                <ins style="color: red"><?php echo $sale = number_format($value->price - ($value->price * $value->sale_off)/100)?>(VND)</ins> <del><?php echo number_format($value->price)?>(VND)</del>
+                            </div>
+
+                            <div class="product-option-shop">
+                                <a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/canvas/shop/?add-to-cart=70">Thêm vào giỏ hàng</a>
+                            </div>
+                        </div>
+                    </div>
+                    <?php
+                }
             } ?>
         </div>
 
