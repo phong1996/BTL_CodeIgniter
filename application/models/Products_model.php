@@ -43,5 +43,11 @@ Class Products_model extends MY_Model
         $query = $this->db->query('select * from `products` ORDER BY id DESC LIMIT 12');
         return $query->result_array();
     }
+
+    public function search_pr($string)
+    {
+        $query = $this->db->query('SELECT * FROM products WHERE name LIKE '%''.$string.''%' ');
+        return $query->result_array();
+    }
     
 }

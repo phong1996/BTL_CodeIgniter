@@ -10,8 +10,8 @@ class Search extends MY_Controller{
     }
 
     function index(){
-        echo $this->input->post('pr_name');
-        $input = array();
-        $list_pr = $this->products_model->get_list_if([], ['id_producer' => $id]);
+        $string = $this->input->post('pr_name');
+        $list_pr = $this->products_model->search_pr($string);
+        pre($list_pr);
     }
 }
