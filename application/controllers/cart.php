@@ -50,11 +50,11 @@
 			}
 			if($this->input->post('pay'))
 			{
-
+				return redirect('pay');
 			}
 			else
 			{
-				redirect('home');
+				return redirect('home');
 			}
 		}
 

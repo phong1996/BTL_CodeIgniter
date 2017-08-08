@@ -91,7 +91,7 @@
 									<?php endforeach ?>
 									<tr>
 										<td class="actions" colspan="6">
-											<input type="submit" value="Thanh toán" name="proceed" class="checkout-button button alt wc-forward pull-right">
+											<input type="submit" value="Thanh toán" name="pay" class="checkout-button button alt wc-forward pull-right">
 											<input type="submit" value="Cập nhập" name="update" class="button pull-right" style="margin-right: 10px">
 											<input type="submit" value="Xóa giỏ hàng" name="delete" class="button pull-right" style="margin-right: 10px">
 											<input type="submit" value="Tiếp tục mua hàng" name="home" class="button pull-right" style="margin-right: 10px">
@@ -100,7 +100,6 @@
 								</tbody>
 							</table>
 						</form>
-
 						<div class="cart-collaterals">
 							<div class="cart_totals ">
 								<h2>Tông số</h2>
