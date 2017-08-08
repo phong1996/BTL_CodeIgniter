@@ -42,26 +42,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <input type="text" required name="address" placeholder="Address" />
                         <input type="text" required name="phone" placeholder="Phone Number" />
                         <div class="remember">
-			             <span class="checkbox1">
-							   <label class="checkbox"><input type="checkbox" name="remember" ><i> </i>Duy trì đăng nhập</label>
-						 </span>
-                            <div class="forgot">
-                                <h6><a href="#">Quên mật khẩu?</a></h6>
+
+                            <div class="forgot" style="text-align: center">
+                                <h6><a href="login">Bạn đã có tài khoản</a></h6>
                             </div>
                             <div class="clear"> </div>
                         </div>
 
-                        <input name="login" type="submit" value="Đăng Nhập">
+                        <input name="login" type="submit" value="Tạo tài khoản">
                     </form>
-                    <div class="header-left-top">
-                        <div class="sign-up"> <h2>Hoặc</h2> </div>
-
-                    </div>
-                    <div class="header-social wthree">
-                        <a href="#" class="face"><h5>Facebook</h5></a>
-                        <a href="#" class="twitt"><h5>Twitter</h5></a>
-                    </div>
-
                 </div>
             </div>
 

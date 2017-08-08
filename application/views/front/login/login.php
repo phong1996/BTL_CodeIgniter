@@ -41,7 +41,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							   <label class="checkbox"><input type="checkbox" name="remember" ><i> </i>Duy trì đăng nhập</label>
 						 </span>
 						 <div class="forgot">
-						 	<h6><a href="#">Quên mật khẩu?</a></h6>
+						 	<h6><a href="register">Đăng ký tài khoản</a></h6>
 						 </div>
 						<div class="clear"> </div>
 					  </div>

@@ -60,7 +60,7 @@ class Login extends MY_Controller {
 
     public function logOut()
     {
-        $this->session->unset_userdata("user_login");
+        $this->session->unset_userdata("customer_login");
         redirect('login');
     }
 }

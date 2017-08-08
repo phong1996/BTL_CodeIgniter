@@ -1,0 +1,24 @@
+table{
+    width: 50%;
+    margin: auto;
+    height: 262px;
+}
+tr{
+    border: 1px solid black;
+}
+td{
+    border: 1px solid black;
+    line-height: 55px;
+    text-align: center;
+}
+.titles{
+    width: 150px;
+}
+.cnt{
+    border: none;
+}
+input{
+width: 100%;
+    font-weight: bold;
+    text-align: center;
+}

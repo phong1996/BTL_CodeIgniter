@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="<?php echo public_front_url()?>/css/responsive.css">
     <link rel="stylesheet" href="<?php echo public_front_url()?>/popup_login/css/reset.css"> <!-- CSS reset -->
     <link rel="stylesheet" href="<?php echo public_front_url()?>/popup_login/css/style.css"> <!-- Gem style -->
+    <link rel="stylesheet" href="<?php echo public_front_url()?>/css/style.css">
     <script src="<?php echo public_front_url()?>/popup_login/js/modernizr.js"></script>
     <script src="https://code.jquery.com/jquery.min.js"></script>
 
@@ -56,13 +57,13 @@
                     <ul>
                        <?php if(!isset($this->session->userdata('customer_login')->fullname)){
                            ?>
-                           <li><a class="cd-signin" href="login"><i class="fa fa-user"></i> Đăng nhập</a></li>
+                           <li><a class="cd-signin" href="<?php echo base_url()?>/login"><i class="fa fa-user"></i> Đăng nhập</a></li>
                            <li><a href="#"><i class="fa fa-users" aria-hidden="false"></i> Đăng ký</a></li>
                            <?php
                        } ?>
                         <?php if(isset($this->session->userdata('customer_login')->fullname)){
                             ?><li><a href="Userinfo/index/<?php echo $this->session->userdata('customer_login')->id; ?>"><i class="fa fa-user"></i>Xin Chào: <b><?php echo $this->session->userdata('customer_login')->fullname; ?></b></a></li>
-                            <li><a href="login/logOut"><i class="fa fa-sign-out" aria-hidden="true"></i> Đăng xuất</a></li><?php
+                            <li><a href="<?php echo base_url()?>login/logOut"><i class="fa fa-sign-out" aria-hidden="true"></i> Đăng xuất</a></li><?php
                         } ?>
 
 

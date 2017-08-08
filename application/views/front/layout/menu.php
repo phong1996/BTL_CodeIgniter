@@ -16,7 +16,7 @@
                         foreach($this->session->userdata('menu') as $value)
                         {
                     ?>
-                            <li><a href="index.html"><?php echo $value->name ?></a></li>
+                            <li><a href="<?php echo base_url()?>producer/index/<?php echo $value->id?>"><?php echo $value->name ?></a></li>
 
                     <?php } ?>
                 </ul>
