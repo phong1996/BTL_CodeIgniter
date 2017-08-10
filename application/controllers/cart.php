@@ -50,7 +50,12 @@
 			}
 			if($this->input->post('pay'))
 			{
-				return redirect('pay');
+				if(count($this->cart->contents()))
+					return redirect('pay');
+				else
+				{
+					return redirect('home');
+				}
 			}
 			else
 			{

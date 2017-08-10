@@ -1,125 +1,108 @@
-<div class="row clearfix">
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <div class="card">
-            <div class="header">
-                <h2>
-                    SỬA ĐƠN HÀNG
-                </h2>
-                <ul class="header-dropdown m-r--5">
-                    <li class="dropdown">
-                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            <i class="material-icons">more_vert</i>
-                        </a>
-                        <ul class="dropdown-menu pull-right">
-                            <li><a href="javascript:void(0);" class=" waves-effect waves-block">Action</a></li>
-                            <li><a href="javascript:void(0);" class=" waves-effect waves-block">Another action</a></li>
-                            <li><a href="javascript:void(0);" class=" waves-effect waves-block">Something else here</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div class="body">
-                <form class="form-horizontal" id="frm_edit" action="update" method="post">
-                    <input type="hidden" name="id" value="<?php echo $user_info->id ?>" id="id">
-                    <div class="row clearfix">
-                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                            <label for="email_address_2">Id_users</label>
-                        </div>
-                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                            <div class="form-group">
-                                <div class="form-line">
-                                    <input type="text"  name="id_users" value="<?php echo $user_info->id_users ?>" class="form-control" placeholder="Enter your Id_users">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row clearfix">
-                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                            <label for="password_2">Cus_name</label>
-                        </div>
-                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                            <div class="form-group">
-                                <div class="form-line">
-                                    <input type="text" name="cus_name" value="<?php echo $user_info->cus_name ?>" class="form-control" placeholder="Enter your Cus_name">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row clearfix">
-                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                            <label for="password_2">Cus_phone</label>
-                        </div>
-                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                            <div class="form-group">
-                                <div class="form-line">
-                                    <input type="text" name="cus_phone" value="<?php echo $user_info->cus_phone ?>" class="form-control" placeholder="Enter your Cus_phone">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row clearfix">
-                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                            <label for="password_2">Cus_email</label>
-                        </div>
-                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                            <div class="form-group">
-                                <div class="form-line">
-                                    <input type="text"  name="cus_email" value="<?php echo $user_info->cus_email ?>" class="form-control" placeholder="Enter your Cus_email">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row clearfix">
-                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                            <label for="password_2">Cus_adress</label>
-                        </div>
-                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                            <div class="form-group">
-                                <div class="form-line">
-                                    <input type="text"  name="cus_adress" value="<?php echo $user_info->cus_adress ?>" class="form-control" placeholder="Enter your Cus_adress">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row clearfix">
-                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                            <label for="password_2">Total_price</label>
-                        </div>
-                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                            <div class="form-group">
-                                <div class="form-line">
-                                    <input type="text" name="total_price" value="<?php echo $user_info->total_price ?>" class="form-control" placeholder="Enter your Total_price">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row clearfix">
-                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-                            <label for="password_2">Created_at</label>
-                        </div>
-                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-                            <div class="form-group">
-                                <div class="form-line">
-                                    <input type="text"  name="created_at" value="<?php echo $user_info->created_at ?>" class="form-control" placeholder="Enter your Created_at">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="card">
+        <div class="header">
+            <h2>
+                Thông Tin Khách Hàng
+            </h2>
+        </div>
+        <div class="body table-responsive">
 
-                    <div class="row clearfix">
-                        <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5">
-                            <input type="checkbox" id="remember_me_3" class="filled-in">
-                            <label for="remember_me_3">Remember Me</label>
-                        </div>
-                    </div>
-                    
-                    <div class="row clearfix">
-                        <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5">
-                            <button type="submit" class="btn btn-primary m-t-15 waves-effect">SỬA</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
+            <div class="form-horizontal">
+              <div class="form-group">
+                <label class="control-label col-sm-2" for="email">Họ Tên:</label>
+                <div class="col-sm-10">
+                <label class="form-control"><?php echo $bill->cus_name?></label>
+               </div>
+           </div>
+           <div class="form-group">
+            <label class="control-label col-sm-2" for="pwd">Số Điện Thoại:</label>
+            <div class="col-sm-10"> 
+              <label class="form-control"><?php echo $bill->cus_phone?></label>
+          </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="pwd">Địa chỉ:</label>
+        <div class="col-sm-10"> 
+          <label class="form-control"><?php echo $bill->cus_adress ?></label>
+      </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="pwd">Email:</label>
+    <div class="col-sm-10"> 
+      <label class="form-control"><?php echo $bill->cus_email ?></label>
+  </div>
+</div>
+<div class="form-group">
+    <label class="control-label col-sm-2" for="pwd">Ghi chú:</label>
+    <div class="col-sm-10"> 
+      <label class="form-control"><?php echo $bill->note ?></label>
+  </div>
+</div>
+<div class="form-group">
+    <label class="control-label col-sm-2" for="pwd">Trạng thái:</label>
+    <div class="col-sm-10"> 
+      <label class="form-control">
+      <?php if ($bill->status==0): ?>
+            Chưa Giao Hàng
+        <?php else: ?>
+            Đã giao hàng
+        <?php endif ?>
+      </label>
+  </div>
+</div>
+<div class="form-group">
+    <label class="control-label col-sm-2" for="pwd">loại giao dịch:</label>
+    <div class="col-sm-10"> 
+      <label class="form-control">
+        <?php if ($bill->payment=='offline'): ?>
+            Thanh Toán khi nhận hàng
+        <?php else: ?>
+            Bảo Kim
+        <?php endif ?>
+
+    </label>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="card">
+        <div class="header">
+            <h2>
+                Thông Tin Đơn Hàng
+            </h2>
+        </div>
+        <div class="body table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Mã Sản phẩm</th>
+                        <th>Sản phẩm</th>
+                        <th>Ảnh</th>
+                        <th>Đơn giá</th>
+                        <th>Số lượng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php foreach ($bill_info as $key => $value): ?>
+                    <tr>
+                        <td><?php echo $this->Products_model->get_info($value->id_product)->id ?></td>
+                        <td><?php echo $this->Products_model->get_info($value->id_product)->name ?></td>
+                        <td><img width=100 src="<?php echo base_url().'images/products/'.$this->Products_model->get_info($value->id_product)->avatar ?>"></td>
+                        <td><?php echo number_format($this->Products_model->get_info($value->id_product)->price) ?> đồng</td>
+                        <td><?php echo $value->quatyti ?></td>
+                    </tr>
+                 <?php endforeach ?>
+                </tbody>
+            </table>
+             <label>Tổng Tiền : <?php echo number_format($bill->total_price); ?> Đồng</label>
+             <?php if ($bill->status==0): ?>
+                  <a href="<?php echo base_url()."admin/bill/ship/$bill->id"; ?>" class="btn btn-primary pull-right">Giao hàng</a>
+             <?php endif ?>
+           
         </div>
     </div>
 </div>
