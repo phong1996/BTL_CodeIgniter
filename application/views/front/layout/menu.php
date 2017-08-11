@@ -20,6 +20,7 @@
                             <li><a href="<?php echo base_url()?>producer/index/<?php echo $value->id?>"><?php echo $value->name ?></a></li>
 
                     <?php } ?>
+                    <li class=""><a href="<?php echo base_url().'news' ?>">Tech news</a></li>
                 </ul>
             </div>
         </div>
