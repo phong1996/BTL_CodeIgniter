@@ -1,6 +1,6 @@
 <div class="col-md-12">
 	<div class="product-bit-title text-center">
-		<h2>Shopping Cart</h2>
+		<h2 style="color: black">Shopping Cart</h2>
 	</div>
 </div>
 <div class="single-product-area">

@@ -5,15 +5,9 @@
     <div class="zigzag-bottom"></div>
     <div class="container">
         <div class="row" style="font-family: 'Open Sans Condensed', sans-serif">
-            <div class="col-md-3 col-sm-6">
-                <div class="single-sidebar">
-                    <h2 class="sidebar-title">Tìm Kiếm Sản Phẩm</h2>
-                    <form action="<?php echo base_url()?>search" method="post">
-                        <input style="color: black;" type="text" placeholder="Tên sản phẩm..." name="pr_name">
-                        <input type="submit" value="Tìm Kiếm">
-                    </form>
-                </div>
-            </div>
+        <div class="col-md-3 col-sm-6">
+           <?php  $this->load->view('front/layout/search'); ?>
+        </div>
             <div class="col-md-3 col-sm-6">
                 <div class="single-promo promo2">
                     <i class="fa fa-truck"></i>
@@ -54,7 +48,7 @@
                                     <div class="product-f-image">
                                         <img src="<?php echo base_url().'images/products/'.$value['avatar']?>" alt="">
                                         <div class="product-hover">
-                                            <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                            <a href="<?php echo base_url().'cart/addOne/'.$value['id']; ?>" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                             <a href="<?php echo base_url().'productdetail/detail/'.$value['id']; ?>" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                         </div>
                                     </div>

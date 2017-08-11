@@ -12,6 +12,8 @@ class Search extends MY_Controller{
     function index(){
         $string = $this->input->post('pr_name');
         $list_pr = $this->products_model->search_pr($string);
-        pre($list_pr);
+        $this->data['content']='front/search/index';
+        $this->data['list_pro']=$list_pr;
+        $this->load->view('front/layout/master',$this->data);
     }
 }
