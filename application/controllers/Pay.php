@@ -41,7 +41,7 @@
 						'quatyti'=>$value['qty'],
 					]);
 				}
-				$this->cart->destry();
+				$this->cart->destroy();
 				return redirect('success');
 			}
 			if($this->input->post('payment')=='baokim')

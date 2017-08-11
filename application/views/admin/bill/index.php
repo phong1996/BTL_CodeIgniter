@@ -24,30 +24,17 @@
                     <table class="table table-bordered table-striped table-hover dataTable js-exportable">
                         <thead>
                         <tr role="row">
-                            <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 142px;">ID</th>
-                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 235px;">ID_users</th>
-                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 103px;">Cus_name</th>
-                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 46px;">Cus_phone</th>
-                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 97px;">Cus_email</th>
-                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 79px;">Cus_adress</th>
-                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 97px;">Total_price</th>
-                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 79px;">Create_at</th>
-                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 79px;">Action</th>
+                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending">MÃ khách hàng</th>
+                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" >Tên khách hàng</th>
+                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" >Số điện thoại</th>
+                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" >Địa Chỉ</th>
+                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" >Tổng Tiền</th>
+                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending">Giao dịch</th>
+                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" >Trạng Thái</th>
+                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending">Action</th>
                         </tr>
                         </thead>
-                        <tfoot>
-                        <tr>
-                            <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 142px;">ID</th>
-                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 235px;">ID_users</th>
-                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 103px;">Cus_name</th>
-                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 46px;">Cus_phone</th>
-                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 97px;">Cus_email</th>
-                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 79px;">Cus_adress</th>
-                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 97px;">Total_price</th>
-                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 79px;">Create_at</th>
-                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 79px;">Action</th>
-                        </tr>
-                        </tfoot>
+                        
                         <tbody>
                         
                         <?php
@@ -55,14 +42,25 @@
                         {
                             ?>
                         <tr role="row" class="even">
-                            <td class="sorting_1"><?=$li->id?></td>
                             <td><?=$li->id_users?></td>
                             <td><?=$li->cus_name?></td>
                             <td><?=$li->cus_phone?></td>
-                            <td><?=$li->cus_email?></td>
                             <td><?=$li->cus_adress?></td>
-                            <td><?=$li->total_price?></td>
-                            <td><?=$li->created_at?></td>
+                            <td><?=number_format($li->total_price) ?> đồng</td>
+                            <td>
+                                <?php if ($li->payment=='offline'): ?>
+                                    TT khi nhận hàng
+                                <?php else: ?>
+                                    Bảo Kim
+                                <?php endif ?>
+                            </td>
+                            <td>
+                                <?php if ($li->status==0): ?>
+                                    Chưa Giao Hàng
+                                <?php else: ?>
+                                    Đã giao hàng
+                                <?php endif ?>
+                            </td>
                              <td>
                                 <a href="<?php echo url_admin('Bill/delete'); ?>?id=<?php echo $li->id ?>"><i class="fa fa-trash-o" aria-hidden="true" onclick="return confirm('Bạn muốn xóa???');"></i></a>
                                 <a href="<?php echo url_admin('Bill/updateLoad'); ?>?id=<?php echo $li->id ?>"><i style="margin-left: 18px;" class="fa fa-pencil-square-o" aria-hidden="true"></i></a>

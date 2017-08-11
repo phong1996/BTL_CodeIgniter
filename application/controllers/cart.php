@@ -29,6 +29,19 @@
 			$this->cart->insert($data);
 			return redirect('cart');
 		}
+		public function addOne($id)
+		{ 
+			$product=$this->Products_model->get_info($id);
+			$data=array(
+				'id'=>$product->id,
+				'qty'=>1,
+				'price'=>$product->price,
+				'avatar'=>$product->avatar,
+				 'name'=>$product->name,
+				);
+			$this->cart->insert($data);
+			return redirect('cart');
+		}
 		public function update()
 		{
 			if($this->input->post('delete'))
@@ -50,7 +63,12 @@
 			}
 			if($this->input->post('pay'))
 			{
-				return redirect('pay');
+				if(count($this->cart->contents()))
+					return redirect('pay');
+				else
+				{
+					return redirect('home');
+				}
 			}
 			else
 			{

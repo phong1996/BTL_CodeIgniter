@@ -6,6 +6,8 @@ Class Bill extends My_Controller{
  function __construct() {
        parent::__construct();
        $this->load->model('Bill_model');
+        $this->load->model('BillInfo_model');
+        $this->load->model('Products_model');
     }
 
     public function index()
@@ -30,7 +32,8 @@ Class Bill extends My_Controller{
     function updateLoad()
     {
         $list = $this->Bill_model->get_info($this->input->get('id'));
-        $this->data['user_info']=$list;
+        $this->data['bill_info']=$this->BillInfo_model->get_list_if('',['id_bill'=>$this->input->get('id')],'*');
+        $this->data['bill']=$list;
         $this->data['content']='admin/Bill/edit';
         $this->load->view('admin/master',$this->data);
     }
@@ -53,6 +56,11 @@ Class Bill extends My_Controller{
             $this->session->set_flashdata('flash_message', 'Sửa Không Thành Công');
         }
 
+    }
+    public function ship($id)
+    {
+        $this->Bill_model->update($id,['status'=>1]);
+       return redirect('admin/Bill');
     }
 
 

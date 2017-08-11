@@ -44,7 +44,6 @@
         <select name="payment" class="form-control">
           <option value="">Chọn hình thức thanh toán</option>
           <option value="offline">Thanh toán khi nhận hàng</option>
-          <option value="nganluong">Ngân Lượng</option>
           <option value="baokim">Bảo kim</option>
         </select>
       </div>
