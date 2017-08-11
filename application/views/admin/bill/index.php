@@ -24,7 +24,6 @@
                     <table class="table table-bordered table-striped table-hover dataTable js-exportable">
                         <thead>
                         <tr role="row">
-                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending">MÃ khách hàng</th>
                             <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" >Tên khách hàng</th>
                             <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" >Số điện thoại</th>
                             <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" >Địa Chỉ</th>
@@ -42,7 +41,6 @@
                         {
                             ?>
                         <tr role="row" class="even">
-                            <td><?=$li->id_users?></td>
                             <td><?=$li->cus_name?></td>
                             <td><?=$li->cus_phone?></td>
                             <td><?=$li->cus_adress?></td>

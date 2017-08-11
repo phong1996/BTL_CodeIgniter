@@ -20,13 +20,12 @@
 		{
 			$cart=$this->cart->contents(); 
 			$this->Bill_model->create([
-				'id_users'=>$this->input->post('user_id'),
 				'cus_name'=>$this->input->post('name'),
 				'cus_phone'=>$this->input->post('phone'),
 				'cus_email'=>$this->input->post('email'),
 				'cus_adress'=>$this->input->post('address'),
 				'total_price'=>$this->cart->total(),
-				'created_at'=>now(),
+				'created_at'=>date("Y-m-d"),
 				'status'=>'0',
 				'payment'=>$this->input->post('payment'),
 				'note'=>$this->input->post('note')
@@ -42,12 +41,17 @@
 					]);
 				}
 				$this->cart->destroy();
-				return redirect('success');
+				return redirect('pay/success');
 			}
 			if($this->input->post('payment')=='baokim')
 			{
-				
+				$this->cart->destroy();
 			}
+		}
+		public function success()
+		{
+			$this->data['content']='front/success/index';
+			$this->load->view('front/layout/master',$this->data);
 		}
 	}
  ?>

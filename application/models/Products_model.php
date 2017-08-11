@@ -48,5 +48,9 @@ Class Products_model extends MY_Model
         $query = $this->db->query("SELECT * FROM products WHERE name LIKE '%".$string."%'");
         return $query->result_array();
     }
+    public function getTotalProduct()
+    {
+       return $this->get_total();
+    }
 
 }

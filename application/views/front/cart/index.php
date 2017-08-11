@@ -12,34 +12,15 @@
 
 				<div class="single-sidebar">
 					<h2 class="sidebar-title">Sản phẩm bán chạy	</h2>
-					<div class="thubmnail-recent">
-						<img src="img/product-thumb-1.jpg" class="recent-thumb" alt="">
-						<h2><a href="single-product.html">Sony Smart TV - 2015</a></h2>
-						<div class="product-sidebar-price">
-							<ins>$700.00</ins> <del>$800.00</del>
-						</div>                             
-					</div>
-					<div class="thubmnail-recent">
-						<img src="img/product-thumb-1.jpg" class="recent-thumb" alt="">
-						<h2><a href="single-product.html">Sony Smart TV - 2015</a></h2>
-						<div class="product-sidebar-price">
-							<ins>$700.00</ins> <del>$800.00</del>
-						</div>                             
-					</div>
-					<div class="thubmnail-recent">
-						<img src="img/product-thumb-1.jpg" class="recent-thumb" alt="">
-						<h2><a href="single-product.html">Sony Smart TV - 2015</a></h2>
-						<div class="product-sidebar-price">
-							<ins>$700.00</ins> <del>$800.00</del>
-						</div>                             
-					</div>
-					<div class="thubmnail-recent">
-						<img src="img/product-thumb-1.jpg" class="recent-thumb" alt="">
-						<h2><a href="single-product.html">Sony Smart TV - 2015</a></h2>
-						<div class="product-sidebar-price">
-							<ins>$700.00</ins> <del>$800.00</del>
-						</div>                             
-					</div>
+					<?php foreach ($product_selling as $key => $value): ?>
+						<div class="thubmnail-recent">
+							<img src="<?php echo base_url().'images/products/'.$this->Products_model->get_info($value->id_product,'*')->avatar ?>" class="recent-thumb" alt="">
+							<h2><a href="single-product.html"><?php echo $this->Products_model->get_info($value->id_product,'*')->name ?></a></h2>
+							<div class="product-sidebar-price">
+								<ins><?php echo number_format($this->Products_model->get_info($value->id_product,'*')->price) ?> Đồng</ins>
+							</div>                             
+						</div>
+					<?php endforeach ?>
 				</div>
 			</div>
 

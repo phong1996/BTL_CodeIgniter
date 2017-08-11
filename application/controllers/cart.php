@@ -9,9 +9,11 @@
 		{
 			parent::__construct();
 			$this->load->model('Products_model');
+			$this->load->model('BillInfo_model');
 		}
 		public function index()
 		{
+			$this->data['product_selling']=$this->BillInfo_model->product_selling();
 			$this->data['cart']=$this->cart->contents();
 			$this->data['content']='front/cart/index';
 			return $this->load->view('front/layout/master',$this->data);

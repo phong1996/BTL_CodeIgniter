@@ -1,0 +1,1 @@
+<h1 align="center" style="font-size: 40px;color: red;font-weight: bold; padding: 50px">Đặt hàng thành công !! <a href="<?php echo base_url().'home'; ?>">Quay Lại trang chủ</a></h1>
